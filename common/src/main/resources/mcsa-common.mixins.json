@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "timefall.mcsa.mixin",
+  "compatibilityLevel": "JAVA_16",
+  "client": [
+  ],
+  "mixins": [
+    "EndermanEntityMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

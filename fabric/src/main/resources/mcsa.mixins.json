@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "timefall.mcsa.fabric.mixins",
+  "compatibilityLevel": "JAVA_16",
+  "client": [
+  ],
+  "mixins": [
+    "LivingEntityMixin",
+    "ServerPlayerEntityMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
