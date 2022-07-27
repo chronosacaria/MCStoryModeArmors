@@ -1,0 +1,28 @@
+{
+  "replace": false,
+  "values": [
+    "mcsa:adamantium_impervium_helmet",
+    "mcsa:champion_petra_helmet",
+    "mcsa:dragonsbane_helmet",
+    "mcsa:ellegaard_helmet",
+    "mcsa:ender_defender_helmet",
+    "mcsa:enderman_soren_helmet",
+    "mcsa:gabriel_helmet",
+    "mcsa:golden_goliath_helmet",
+    "mcsa:golden_goliath_circuitry_helmet",
+    "mcsa:harpers_headset_helmet",
+    "mcsa:ivor_helmet",
+    "mcsa:lukas_helmet",
+    "mcsa:magnus_helmet",
+    "mcsa:ninja_ivor_helmet",
+    "mcsa:olivia_helmet",
+    "mcsa:petra_helmet",
+    "mcsa:prismarine_soldier_helmet",
+    "mcsa:redstone_riot_helmet",
+    "mcsa:shield_of_infinity_helmet",
+    "mcsa:soren_helmet",
+    "mcsa:star_shield_helmet",
+    "mcsa:swordbreaker_helmet",
+    "mcsa:tim_helmet"
+  ]
+}

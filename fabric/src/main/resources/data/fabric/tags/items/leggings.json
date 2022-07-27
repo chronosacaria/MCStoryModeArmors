@@ -1,0 +1,27 @@
+{
+  "replace": false,
+  "values": [
+    "mcsa:adamantium_impervium_leggings",
+    "mcsa:champion_petra_leggings",
+    "mcsa:dragonsbane_leggings",
+    "mcsa:ellegaard_leggings",
+    "mcsa:ender_defender_leggings",
+    "mcsa:enderman_soren_leggings",
+    "mcsa:gabriel_leggings",
+    "mcsa:golden_goliath_leggings",
+    "mcsa:golden_goliath_circuitry_leggings",
+    "mcsa:ivor_leggings",
+    "mcsa:lukas_leggings",
+    "mcsa:magnus_leggings",
+    "mcsa:ninja_ivor_leggings",
+    "mcsa:olivia_leggings",
+    "mcsa:petra_leggings",
+    "mcsa:prismarine_soldier_leggings",
+    "mcsa:redstone_riot_leggings",
+    "mcsa:shield_of_infinity_leggings",
+    "mcsa:soren_leggings",
+    "mcsa:star_shield_leggings",
+    "mcsa:swordbreaker_leggings",
+    "mcsa:tim_leggings"
+  ]
+}

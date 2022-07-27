@@ -1,0 +1,27 @@
+{
+  "replace": false,
+  "values": [
+    "mcsa:adamantium_impervium_chestplate",
+    "mcsa:champion_petra_chestplate",
+    "mcsa:dragonsbane_chestplate",
+    "mcsa:ellegaard_chestplate",
+    "mcsa:ender_defender_chestplate",
+    "mcsa:enderman_soren_chestplate",
+    "mcsa:gabriel_chestplate",
+    "mcsa:golden_goliath_chestplate",
+    "mcsa:golden_goliath_circuitry_chestplate",
+    "mcsa:ivor_chestplate",
+    "mcsa:lukas_chestplate",
+    "mcsa:magnus_chestplate",
+    "mcsa:ninja_ivor_chestplate",
+    "mcsa:olivia_chestplate",
+    "mcsa:petra_chestplate",
+    "mcsa:prismarine_soldier_chestplate",
+    "mcsa:redstone_riot_chestplate",
+    "mcsa:shield_of_infinity_chestplate",
+    "mcsa:soren_chestplate",
+    "mcsa:star_shield_chestplate",
+    "mcsa:swordbreaker_chestplate",
+    "mcsa:tim_chestplate"
+  ]
+}

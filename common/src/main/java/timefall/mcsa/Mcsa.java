@@ -11,6 +11,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import timefall.mcsa.init.ArmorsInit;
 import timefall.mcsa.init.BlocksInit;
+import timefall.mcsa.init.LootInit;
 
 import java.util.function.Supplier;
 
@@ -30,6 +31,7 @@ public class Mcsa {
         System.out.println(McsaExpectPlatform.getConfigDirectory().toAbsolutePath().normalize().toString());
         BlocksInit.BLOCKS.register();
         ArmorsInit.ARMOR.register();
+        LootInit.init();
     }
 
     public static Identifier idOf(String regName) {
