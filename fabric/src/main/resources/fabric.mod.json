@@ -3,15 +3,16 @@
   "id": "mcsa",
   "version": "${version}",
   "name": "MC Story Mode Armor",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "description": "Brings the armours from Minecraft Story Mode to Minecraft Java",
   "authors": [
-    "Me!"
+    "chronosacaria"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/mcsa",
+    "sources": "https://github.com/chronosacaria/MCStoryModeArmors",
+    "issues": "https://github.com/chronosacaria/MCStoryModeArmors/issues"
   },
-  "license": "Insert License Here",
+  "license": "MIT",
   "icon": "assets/mcsa/icon.png",
   "environment": "*",
   "entrypoints": {
@@ -26,6 +27,6 @@
   "depends": {
     "fabric": "*",
     "minecraft": ">=1.18.2",
-    "architectury": ">=4.4.70"
+    "architectury": ">=4.6.77"
   }
 }

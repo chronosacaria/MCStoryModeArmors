@@ -1,15 +1,15 @@
 modLoader = "javafml"
 loaderVersion = "[40,)"
-#issueTrackerURL = ""
-license = "Insert License Here"
+issueTrackerURL = "https://github.com/chronosacaria/MCStoryModeArmors/issues"
+license = "MIT"
 
 [[mods]]
 modId = "mcsa"
 version = "${version}"
 displayName = "MC Story Mode Armor"
-authors = "Me!"
+authors = "chronosacaria"
 description = '''
-This is an example description! Tell everyone what your mod is about!
+Brings the armours from Minecraft Story Mode to Minecraft Java
 '''
 #logoFile = ""
 
@@ -30,6 +30,6 @@ side = "BOTH"
 [[dependencies.mcsa]]
 modId = "architectury"
 mandatory = true
-versionRange = "[4.4.70,)"
+versionRange = "[4.6.77,)"
 ordering = "AFTER"
 side = "BOTH"
