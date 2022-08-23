@@ -1,11 +1,10 @@
 {
-    "itemGroup.mcsa"                                  : "我的世界：故事模式盔甲",
-    "itemGroup.mcsa.group"                            : "我的世界：故事模式盔甲",
+    "itemGroup.mcsa.armor"                            : "我的世界：故事模式盔甲",
   
-    "item.mcsa.艾德曼抗渗金_impervium_helmet"           : "艾德曼抗渗金头盔",
-    "item.mcsa.艾德曼抗渗金_impervium_chestplate"       : "艾德曼抗渗金胸甲",
-    "item.mcsa.艾德曼抗渗金_impervium_leggings"         : "艾德曼抗渗金护腿",
-    "item.mcsa.艾德曼抗渗金_impervium_boots"            : "艾德曼抗渗金靴子",
+    "item.mcsa.adamantium_impervium_helmet"           : "艾德曼抗渗金头盔",
+    "item.mcsa.adamantium_impervium_chestplate"       : "艾德曼抗渗金胸甲",
+    "item.mcsa.adamantium_impervium_leggings"         : "艾德曼抗渗金护腿",
+    "item.mcsa.adamantium_impervium_boots"            : "艾德曼抗渗金靴子",
   
     "item.mcsa.champion_petra_helmet"                 : "冠军佩特拉头盔",
     "item.mcsa.champion_petra_chestplate"             : "冠军佩特拉胸甲",
