@@ -1,119 +1,119 @@
 {
-  "itemGroup.mcsa"                                  : "MC Story Mode Armors",
-  "itemGroup.mcsa.group"                            : "MC Story Mode Armors",
-
-  "item.mcsa.adamantium_impervium_helmet"           : "Adamantium Impervium Helmet",
-  "item.mcsa.adamantium_impervium_chestplate"       : "Adamantium Impervium Chestplate",
-  "item.mcsa.adamantium_impervium_leggings"         : "Adamantium Impervium Leggings",
-  "item.mcsa.adamantium_impervium_boots"            : "Adamantium Impervium Boots",
-
-  "item.mcsa.champion_petra_helmet"                 : "Champion Petra Helmet",
-  "item.mcsa.champion_petra_chestplate"             : "Champion Petra Chestplate",
-  "item.mcsa.champion_petra_leggings"               : "Champion Petra Leggings",
-  "item.mcsa.champion_petra_boots"                  : "Champion Petra Boots",
-
-  "item.mcsa.dragonsbane_helmet"                    : "Dragonsbane Helmet",
-  "item.mcsa.dragonsbane_chestplate"                : "Dragonsbane Chestplate",
-  "item.mcsa.dragonsbane_leggings"                  : "Dragonsbane Leggings",
-  "item.mcsa.dragonsbane_boots"                     : "Dragonsbane Boots",
-
-  "item.mcsa.ellegaard_helmet"                      : "Ellegaard's Helmet",
-  "item.mcsa.ellegaard_chestplate"                  : "Ellegaard's Chestplate",
-  "item.mcsa.ellegaard_leggings"                    : "Ellegaard's Leggings",
-  "item.mcsa.ellegaard_boots"                       : "Ellegaard's Boots",
-
-  "item.mcsa.ender_defender_helmet"                 : "Ender Defender Helmet",
-  "item.mcsa.ender_defender_chestplate"             : "Ender Defender Chestplate",
-  "item.mcsa.ender_defender_leggings"               : "Ender Defender Leggings",
-  "item.mcsa.ender_defender_boots"                  : "Ender Defender Boots",
-
-  "item.mcsa.enderman_soren_helmet"                 : "Soren's Enderman Suit Helmet",
-  "item.mcsa.enderman_soren_chestplate"             : "Soren's Enderman Suit Chestplate",
-  "item.mcsa.enderman_soren_leggings"               : "Soren's Enderman Suit Leggings",
-  "item.mcsa.enderman_soren_boots"                  : "Soren's Enderman Suit Boots",
-
-  "item.mcsa.gabriel_helmet"                        : "Gabriel's Helmet",
-  "item.mcsa.gabriel_chestplate"                    : "Gabriel's Chestplate",
-  "item.mcsa.gabriel_leggings"                      : "Gabriel's Leggings",
-  "item.mcsa.gabriel_boots"                         : "Gabriel's Boots",
-
-  "item.mcsa.golden_goliath_helmet"                 : "Golden Goliath Helmet",
-  "item.mcsa.golden_goliath_chestplate"             : "Golden Goliath Chestplate",
-  "item.mcsa.golden_goliath_leggings"               : "Golden Goliath Leggings",
-  "item.mcsa.golden_goliath_boots"                  : "Golden Goliath Boots",
-
-  "item.mcsa.golden_goliath_circuitry_helmet"       : "Golden Goliath Circuitry Helmet",
-  "item.mcsa.golden_goliath_circuitry_chestplate"   : "Golden Goliath Circuitry Chestplate",
-  "item.mcsa.golden_goliath_circuitry_leggings"     : "Golden Goliath Circuitry Leggings",
-  "item.mcsa.golden_goliath_circuitry_boots"        : "Golden Goliath Circuitry Boots",
-
-  "item.mcsa.harpers_headset_helmet"                : "Harper's Headset",
-
-  "item.mcsa.ivor_helmet"                           : "Ivor's Crown",
-  "item.mcsa.ivor_chestplate"                       : "Ivor's Chestplate",
-  "item.mcsa.ivor_leggings"                         : "Ivor's Leggings",
-  "item.mcsa.ivor_boots"                            : "Ivor's Boots",
-
-  "item.mcsa.lukas_helmet"                          : "Lukas' Goggles",
-  "item.mcsa.lukas_chestplate"                      : "Lukas' Chestplate",
-  "item.mcsa.lukas_leggings"                        : "Lukas' Leggings",
-  "item.mcsa.lukas_boots"                           : "Lukas' Boots",
-
-  "item.mcsa.magnus_helmet"                         : "Magnus' Helmet",
-  "item.mcsa.magnus_chestplate"                     : "Magnus' Chestplate",
-  "item.mcsa.magnus_leggings"                       : "Magnus' Leggings",
-  "item.mcsa.magnus_boots"                          : "Magnus' Boots",
-
-  "item.mcsa.ninja_ivor_helmet"                     : "Ivor's Ninja Mask",
-  "item.mcsa.ninja_ivor_chestplate"                 : "Ivor's Ninja Chestplate",
-  "item.mcsa.ninja_ivor_leggings"                   : "Ivor's Ninja Leggings",
-  "item.mcsa.ninja_ivor_boots"                      : "Ivor's Ninja Boots",
-
-  "item.mcsa.olivia_helmet"                         : "Olivia's Helmet",
-  "item.mcsa.olivia_chestplate"                     : "Olivia's Chestplate",
-  "item.mcsa.olivia_leggings"                       : "Olivia's Leggings",
-  "item.mcsa.olivia_boots"                          : "Olivia's Boots",
-
-  "item.mcsa.petra_helmet"                          : "Petra's Helmet",
-  "item.mcsa.petra_chestplate"                      : "Petra's Chestplate",
-  "item.mcsa.petra_leggings"                        : "Petra's Leggings",
-  "item.mcsa.petra_boots"                           : "Petra's Boots",
-
-  "item.mcsa.prismarine_soldier_helmet"             : "Prismarine Soldier Helmet",
-  "item.mcsa.prismarine_soldier_chestplate"         : "Prismarine Soldier Chestplate",
-  "item.mcsa.prismarine_soldier_leggings"           : "Prismarine Soldier Leggings",
-  "item.mcsa.prismarine_soldier_boots"              : "Prismarine Soldier Boots",
-
-  "item.mcsa.redstone_riot_helmet"                  : "Redstone Riot Helmet",
-  "item.mcsa.redstone_riot_chestplate"              : "Redstone Riot Chestplate",
-  "item.mcsa.redstone_riot_leggings"                : "Redstone Riot Leggings",
-  "item.mcsa.redstone_riot_boots"                   : "Redstone Riot Boots",
-
-  "item.mcsa.shield_of_infinity_helmet"             : "Shield of Infinity Helmet",
-  "item.mcsa.shield_of_infinity_chestplate"         : "Shield of Infinity Chestplate",
-  "item.mcsa.shield_of_infinity_leggings"           : "Shield of Infinity Leggings",
-  "item.mcsa.shield_of_infinity_boots"              : "Shield of Infinity Boots",
-
-  "item.mcsa.soren_helmet"                          : "Soren's Hat",
-  "item.mcsa.soren_chestplate"                      : "Soren's Chestplate",
-  "item.mcsa.soren_leggings"                        : "Soren's Leggings",
-  "item.mcsa.soren_boots"                           : "Soren's Boots",
-
-  "item.mcsa.star_shield_helmet"                    : "Star Shield Helmet",
-  "item.mcsa.star_shield_chestplate"                : "Star Shield Chestplate",
-  "item.mcsa.star_shield_leggings"                  : "Star Shield Leggings",
-  "item.mcsa.star_shield_boots"                     : "Star Shield Boots",
-
-  "item.mcsa.swordbreaker_helmet"                   : "Swordbreaker Helmet",
-  "item.mcsa.swordbreaker_chestplate"               : "Swordbreaker Chestplate",
-  "item.mcsa.swordbreaker_leggings"                 : "Swordbreaker Leggings",
-  "item.mcsa.swordbreaker_boots"                    : "Swordbreaker Boots",
-
-  "item.mcsa.tim_helmet"                            : "Tim's Hat",
-  "item.mcsa.tim_chestplate"                        : "Tim's Chestplate",
-  "item.mcsa.tim_leggings"                          : "Tim's Leggings",
-  "item.mcsa.tim_boots"                             : "Tim's Boots",
-
-  "block.mcsa.white_pumpkin"                        : "White Pumpkin",
-  "block.mcsa.carved_white_pumpkin"                 : "Carved White Pumpkin"
-}
+    "itemGroup.mcsa"                                  : "我的世界：故事模式盔甲",
+    "itemGroup.mcsa.group"                            : "我的世界：故事模式盔甲",
+  
+    "item.mcsa.艾德曼抗渗金_impervium_helmet"           : "艾德曼抗渗金头盔",
+    "item.mcsa.艾德曼抗渗金_impervium_chestplate"       : "艾德曼抗渗金胸甲",
+    "item.mcsa.艾德曼抗渗金_impervium_leggings"         : "艾德曼抗渗金护腿",
+    "item.mcsa.艾德曼抗渗金_impervium_boots"            : "艾德曼抗渗金靴子",
+  
+    "item.mcsa.champion_petra_helmet"                 : "冠军佩特拉头盔",
+    "item.mcsa.champion_petra_chestplate"             : "冠军佩特拉胸甲",
+    "item.mcsa.champion_petra_leggings"               : "冠军佩特拉护腿",
+    "item.mcsa.champion_petra_boots"                  : "冠军佩特拉靴子",
+  
+    "item.mcsa.dragonsbane_helmet"                    : "龙殇头盔",
+    "item.mcsa.dragonsbane_chestplate"                : "龙殇胸甲",
+    "item.mcsa.dragonsbane_leggings"                  : "龙殇护腿",
+    "item.mcsa.dragonsbane_boots"                     : "龙殇靴子",
+  
+    "item.mcsa.ellegaard_helmet"                      : "艾勒卡德的头盔",
+    "item.mcsa.ellegaard_chestplate"                  : "艾勒卡德的胸甲",
+    "item.mcsa.ellegaard_leggings"                    : "艾勒卡德的护腿",
+    "item.mcsa.ellegaard_boots"                       : "艾勒卡德的靴子",
+  
+    "item.mcsa.ender_defender_helmet"                 : "末影守卫者头盔",
+    "item.mcsa.ender_defender_chestplate"             : "末影守卫者胸甲",
+    "item.mcsa.ender_defender_leggings"               : "末影守卫者护腿",
+    "item.mcsa.ender_defender_boots"                  : "末影守卫者靴子",
+  
+    "item.mcsa.enderman_soren_helmet"                 : "索伦的末影人头盔",
+    "item.mcsa.enderman_soren_chestplate"             : "索伦的末影人胸甲",
+    "item.mcsa.enderman_soren_leggings"               : "索伦的末影人护腿",
+    "item.mcsa.enderman_soren_boots"                  : "索伦的末影人靴子",
+  
+    "item.mcsa.gabriel_helmet"                        : "加布里埃尔的头盔",
+    "item.mcsa.gabriel_chestplate"                    : "加布里埃尔的胸甲",
+    "item.mcsa.gabriel_leggings"                      : "加布里埃尔的护腿",
+    "item.mcsa.gabriel_boots"                         : "加布里埃尔的靴子",
+  
+    "item.mcsa.golden_goliath_helmet"                 : "哥利亚金头盔",
+    "item.mcsa.golden_goliath_chestplate"             : "哥利亚金胸甲",
+    "item.mcsa.golden_goliath_leggings"               : "哥利亚金护腿",
+    "item.mcsa.golden_goliath_boots"                  : "哥利亚金靴子",
+  
+    "item.mcsa.golden_goliath_circuitry_helmet"       : "带电哥利亚金头盔",
+    "item.mcsa.golden_goliath_circuitry_chestplate"   : "带电哥利亚金胸甲",
+    "item.mcsa.golden_goliath_circuitry_leggings"     : "带电哥利亚金护腿",
+    "item.mcsa.golden_goliath_circuitry_boots"        : "带电哥利亚金靴子",
+  
+    "item.mcsa.harpers_headset_helmet"                : "哈珀的耳机",
+  
+    "item.mcsa.ivor_helmet"                           : "艾沃尔的王冠",
+    "item.mcsa.ivor_chestplate"                       : "艾沃尔的胸甲",
+    "item.mcsa.ivor_leggings"                         : "艾沃尔的护腿",
+    "item.mcsa.ivor_boots"                            : "艾沃尔的靴子",
+  
+    "item.mcsa.lukas_helmet"                          : "卢卡斯的风镜",
+    "item.mcsa.lukas_chestplate"                      : "卢卡斯的胸甲",
+    "item.mcsa.lukas_leggings"                        : "卢卡斯的护腿",
+    "item.mcsa.lukas_boots"                           : "卢卡斯的靴子",
+  
+    "item.mcsa.magnus_helmet"                         : "马格纳斯的头盔",
+    "item.mcsa.magnus_chestplate"                     : "马格纳斯的胸甲",
+    "item.mcsa.magnus_leggings"                       : "马格纳斯的护腿",
+    "item.mcsa.magnus_boots"                          : "马格纳斯的靴子",
+  
+    "item.mcsa.ninja_ivor_helmet"                     : "艾沃尔忍者面罩",
+    "item.mcsa.ninja_ivor_chestplate"                 : "艾沃尔忍者胸甲",
+    "item.mcsa.ninja_ivor_leggings"                   : "艾沃尔忍者护腿",
+    "item.mcsa.ninja_ivor_boots"                      : "艾沃尔忍者靴子",
+  
+    "item.mcsa.olivia_helmet"                         : "奥利维亚的头盔",
+    "item.mcsa.olivia_chestplate"                     : "奥利维亚的胸甲",
+    "item.mcsa.olivia_leggings"                       : "奥利维亚的护腿",
+    "item.mcsa.olivia_boots"                          : "奥利维亚的靴子",
+  
+    "item.mcsa.petra_helmet"                          : "佩特拉的头盔",
+    "item.mcsa.petra_chestplate"                      : "佩特拉的胸甲",
+    "item.mcsa.petra_leggings"                        : "佩特拉的护腿",
+    "item.mcsa.petra_boots"                           : "佩特拉的靴子",
+  
+    "item.mcsa.prismarine_soldier_helmet"             : "海晶士兵头盔",
+    "item.mcsa.prismarine_soldier_chestplate"         : "海晶士兵胸甲",
+    "item.mcsa.prismarine_soldier_leggings"           : "海晶士兵护腿",
+    "item.mcsa.prismarine_soldier_boots"              : "海晶士兵靴子",
+  
+    "item.mcsa.redstone_riot_helmet"                  : "红石狂暴头盔",
+    "item.mcsa.redstone_riot_chestplate"              : "红石狂暴胸甲",
+    "item.mcsa.redstone_riot_leggings"                : "红石狂暴护腿",
+    "item.mcsa.redstone_riot_boots"                   : "红石狂暴靴子",
+  
+    "item.mcsa.shield_of_infinity_helmet"             : "无限之盾头盔",
+    "item.mcsa.shield_of_infinity_chestplate"         : "无限之盾胸甲",
+    "item.mcsa.shield_of_infinity_leggings"           : "无限之盾护腿",
+    "item.mcsa.shield_of_infinity_boots"              : "无限之盾靴子",
+  
+    "item.mcsa.soren_helmet"                          : "索伦的帽子",
+    "item.mcsa.soren_chestplate"                      : "索伦的胸甲",
+    "item.mcsa.soren_leggings"                        : "索伦的护腿",
+    "item.mcsa.soren_boots"                           : "索伦的靴子",
+  
+    "item.mcsa.star_shield_helmet"                    : "星盾头盔",
+    "item.mcsa.star_shield_chestplate"                : "星盾胸甲",
+    "item.mcsa.star_shield_leggings"                  : "星盾护腿",
+    "item.mcsa.star_shield_boots"                     : "星盾靴子",
+  
+    "item.mcsa.swordbreaker_helmet"                   : "破剑者头盔",
+    "item.mcsa.swordbreaker_chestplate"               : "破剑者胸甲",
+    "item.mcsa.swordbreaker_leggings"                 : "破剑者护腿",
+    "item.mcsa.swordbreaker_boots"                    : "破剑者靴子",
+  
+    "item.mcsa.tim_helmet"                            : "蒂姆的帽子",
+    "item.mcsa.tim_chestplate"                        : "蒂姆的胸甲",
+    "item.mcsa.tim_leggings"                          : "蒂姆的护腿",
+    "item.mcsa.tim_boots"                             : "蒂姆的靴子",
+  
+    "block.mcsa.white_pumpkin"                        : "白南瓜头",
+    "block.mcsa.carved_white_pumpkin"                 : "雕刻过的白南瓜头"
+  }
