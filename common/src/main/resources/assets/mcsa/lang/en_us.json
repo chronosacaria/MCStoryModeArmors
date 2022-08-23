@@ -1,6 +1,5 @@
 {
-  "itemGroup.mcsa"                                  : "MC Story Mode Armors",
-  "itemGroup.mcsa.group"                            : "MC Story Mode Armors",
+  "itemGroup.mcsa.armor"                                  : "MC Story Mode Armors",
 
   "item.mcsa.adamantium_impervium_helmet"           : "Adamantium Impervium Helmet",
   "item.mcsa.adamantium_impervium_chestplate"       : "Adamantium Impervium Chestplate",
