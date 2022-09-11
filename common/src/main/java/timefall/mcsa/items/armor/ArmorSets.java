@@ -94,7 +94,7 @@ public enum ArmorSets implements ArmorMaterial {
             ITEM_ARMOR_EQUIP_DIAMOND,
             () -> Ingredient.ofItems(Items.DIAMOND)),
 
-    NINJA_IVOR_ARMOUR("ninja", "ninja_ivor",
+    NINJA_IVOR_ARMOR("ninja", "ninja_ivor",
             37,
             25,
             ITEM_ARMOR_EQUIP_DIAMOND,
@@ -148,16 +148,11 @@ public enum ArmorSets implements ArmorMaterial {
             ITEM_ARMOR_EQUIP_DIAMOND,
             () -> Ingredient.ofItems(Items.DIAMOND)),
 
-    TIMS_ARMOUR("tim", "tim",
+    TIMS_ARMOR("tim", "tim",
             25,
             25,
             ITEM_ARMOR_EQUIP_DIAMOND,
             () -> Ingredient.ofItems(Items.DIAMOND));
-    //WHITE_PUMPKIN("whitepumpkin", "white_pumpkin",
-    //        25,
-    //        25,
-    //        ITEM_ARMOR_EQUIP_DIAMOND,
-    //        () -> {return Ingredient.ofItems(Items.PUMPKIN);});
 
 
     private static final int[] baseDurability = new int[]{12,14,15,10};
@@ -197,7 +192,7 @@ public enum ArmorSets implements ArmorMaterial {
             case IVOR:
             case LUKAS:
             case MAGNUS:
-            case NINJA_IVOR_ARMOUR:
+            case NINJA_IVOR_ARMOR:
             case OLIVIA:
             case PETRA:
             case PRISMARINE:
@@ -206,7 +201,7 @@ public enum ArmorSets implements ArmorMaterial {
             case SOREN:
             case STAR_SHIELD:
             case SWORDBREAKER:
-            case TIMS_ARMOUR:
+            case TIMS_ARMOR:
                 return Rarity.RARE;
             default:
                 return Rarity.UNCOMMON;

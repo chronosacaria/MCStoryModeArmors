@@ -32,28 +32,28 @@ public class LootInit {
         LootEvent.MODIFY_LOOT_TABLE.register((lootTables, id, context, builtin) -> {
         LootPool.Builder builder = LootPool.builder();
             if (VILLAGER_ARMORER_LOOT_TABLE.contains(id)) {
-                addArmorSet(builder, ArmorsInit.ELLEGAARD_ARMOR, McsaConfig.config.getCharacterArmourSpawnRate());
-                addArmorSet(builder, ArmorsInit.GABRIEL_ARMOR, McsaConfig.config.getCharacterArmourSpawnRate());
-                addArmorSet(builder, ArmorsInit.IVOR_ARMOR, McsaConfig.config.getCharacterArmourSpawnRate());
-                addArmorSet(builder, ArmorsInit.LUKAS_ARMOR, McsaConfig.config.getCharacterArmourSpawnRate());
-                addArmorSet(builder, ArmorsInit.MAGNUS_ARMOR, McsaConfig.config.getCharacterArmourSpawnRate());
-                addArmorSet(builder, ArmorsInit.OLIVIA_ARMOR, McsaConfig.config.getCharacterArmourSpawnRate());
-                addArmorSet(builder, ArmorsInit.PETRA_ARMOR, McsaConfig.config.getCharacterArmourSpawnRate());
-                addArmorSet(builder, ArmorsInit.SOREN_ARMOR, McsaConfig.config.getCharacterArmourSpawnRate());
-                addArmorSet(builder, ArmorsInit.TIM_ARMOR, McsaConfig.config.getCharacterArmourSpawnRate());
+                addArmorSet(builder, ArmorsInit.ELLEGAARD_ARMOR, McsaConfig.config.getCharacterArmorSpawnRate());
+                addArmorSet(builder, ArmorsInit.GABRIEL_ARMOR, McsaConfig.config.getCharacterArmorSpawnRate());
+                addArmorSet(builder, ArmorsInit.IVOR_ARMOR, McsaConfig.config.getCharacterArmorSpawnRate());
+                addArmorSet(builder, ArmorsInit.LUKAS_ARMOR, McsaConfig.config.getCharacterArmorSpawnRate());
+                addArmorSet(builder, ArmorsInit.MAGNUS_ARMOR, McsaConfig.config.getCharacterArmorSpawnRate());
+                addArmorSet(builder, ArmorsInit.OLIVIA_ARMOR, McsaConfig.config.getCharacterArmorSpawnRate());
+                addArmorSet(builder, ArmorsInit.PETRA_ARMOR, McsaConfig.config.getCharacterArmorSpawnRate());
+                addArmorSet(builder, ArmorsInit.SOREN_ARMOR, McsaConfig.config.getCharacterArmorSpawnRate());
+                addArmorSet(builder, ArmorsInit.TIM_ARMOR, McsaConfig.config.getCharacterArmorSpawnRate());
             } else if (STRONGHOLD_LOOT_TABLES.contains(id)) {
-                addArmorSet(builder, ArmorsInit.DRAGONSBANE, McsaConfig.config.getStrongholdArmourSpawnRate());
-                addArmorSet(builder, ArmorsInit.ENDER_DEFENDER, McsaConfig.config.getStrongholdArmourSpawnRate());
-                addArmorSet(builder, ArmorsInit.GOLDEN_GOLIATH_ARMOR, McsaConfig.config.getStrongholdArmourSpawnRate());
-                addArmorSet(builder, ArmorsInit.GOLDEN_GOLIATH_CIRCUITRY_ARMOR, McsaConfig.config.getStrongholdArmourSpawnRate());
-                addArmorSet(builder, ArmorsInit.REDSTONE_RIOT, McsaConfig.config.getStrongholdArmourSpawnRate());
+                addArmorSet(builder, ArmorsInit.DRAGONSBANE, McsaConfig.config.getStrongholdArmorSpawnRate());
+                addArmorSet(builder, ArmorsInit.ENDER_DEFENDER, McsaConfig.config.getStrongholdArmorSpawnRate());
+                addArmorSet(builder, ArmorsInit.GOLDEN_GOLIATH_ARMOR, McsaConfig.config.getStrongholdArmorSpawnRate());
+                addArmorSet(builder, ArmorsInit.GOLDEN_GOLIATH_CIRCUITRY_ARMOR, McsaConfig.config.getStrongholdArmorSpawnRate());
+                addArmorSet(builder, ArmorsInit.REDSTONE_RIOT, McsaConfig.config.getStrongholdArmorSpawnRate());
             } else if (TEMPLE_LOOT_TABLES.contains(id)) {
-                addArmorSet(builder, ArmorsInit.SHIELD_OF_INFINITY, McsaConfig.config.getTempleArmourSpawnRate());
-                addArmorSet(builder, ArmorsInit.STAR_SHIELD, McsaConfig.config.getTempleArmourSpawnRate());
-                addArmorSet(builder, ArmorsInit.SWORDBREAKER, McsaConfig.config.getTempleArmourSpawnRate());
+                addArmorSet(builder, ArmorsInit.SHIELD_OF_INFINITY, McsaConfig.config.getTempleArmorSpawnRate());
+                addArmorSet(builder, ArmorsInit.STAR_SHIELD, McsaConfig.config.getTempleArmorSpawnRate());
+                addArmorSet(builder, ArmorsInit.SWORDBREAKER, McsaConfig.config.getTempleArmorSpawnRate());
             } else if (ARMORER_GIFT_LOOT_TABLE.contains(id)) {
-                addArmorSet(builder, ArmorsInit.ADAMANTIUM_ARMOR, McsaConfig.config.getHovArmourSpawnRate());
-                addArmorSet(builder, ArmorsInit.CHAMPION_PETRA_ARMOR, McsaConfig.config.getHovArmourSpawnRate());
+                addArmorSet(builder, ArmorsInit.ADAMANTIUM_ARMOR, McsaConfig.config.getHovArmorSpawnRate());
+                addArmorSet(builder, ArmorsInit.CHAMPION_PETRA_ARMOR, McsaConfig.config.getHovArmorSpawnRate());
             }
             context.addPool(builder.build());
         });

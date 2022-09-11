@@ -1,7 +1,7 @@
 package timefall.mcsa.forge;
 
-import timefall.mcsa.McsaExpectPlatform;
 import net.minecraftforge.fml.loading.FMLPaths;
+import timefall.mcsa.McsaExpectPlatform;
 
 import java.nio.file.Path;
 

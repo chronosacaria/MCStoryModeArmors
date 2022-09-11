@@ -1,7 +1,7 @@
 package timefall.mcsa.fabric;
 
-import timefall.mcsa.McsaExpectPlatform;
 import net.fabricmc.loader.api.FabricLoader;
+import timefall.mcsa.McsaExpectPlatform;
 
 import java.nio.file.Path;
 

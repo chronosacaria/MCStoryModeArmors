@@ -2,9 +2,9 @@ package timefall.mcsa.forge;
 
 import dev.architectury.platform.forge.EventBuses;
 import net.minecraftforge.eventbus.api.IEventBus;
-import timefall.mcsa.Mcsa;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import timefall.mcsa.Mcsa;
 import timefall.mcsa.forge.init.ItemsInit;
 
 @Mod(Mcsa.MOD_ID)

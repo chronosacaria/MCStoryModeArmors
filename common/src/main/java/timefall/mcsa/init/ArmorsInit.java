@@ -42,7 +42,7 @@ public class ArmorsInit {
     public static final ArmorCollection<ArmorSetItem> MAGNUS_ARMOR =
             ArmorCollection.registerArmorCollection(ArmorSets.MAGNUS, EnumSet.allOf(EquipmentSlot.class));
     public static final ArmorCollection<ArmorSetItem> NINJA_IVOR_ARMOR =
-            ArmorCollection.registerArmorCollection(ArmorSets.NINJA_IVOR_ARMOUR, EnumSet.allOf(EquipmentSlot.class));
+            ArmorCollection.registerArmorCollection(ArmorSets.NINJA_IVOR_ARMOR, EnumSet.allOf(EquipmentSlot.class));
     public static final ArmorCollection<ArmorSetItem> OLIVIA_ARMOR =
             ArmorCollection.registerArmorCollection(ArmorSets.OLIVIA, EnumSet.allOf(EquipmentSlot.class));
     public static final ArmorCollection<ArmorSetItem> PETRA_ARMOR =
@@ -60,5 +60,5 @@ public class ArmorsInit {
     public static final ArmorCollection<ArmorSetItem> SWORDBREAKER =
             ArmorCollection.registerArmorCollection(ArmorSets.SWORDBREAKER, EnumSet.allOf(EquipmentSlot.class));
     public static final ArmorCollection<ArmorSetItem> TIM_ARMOR =
-            ArmorCollection.registerArmorCollection(ArmorSets.TIMS_ARMOUR, EnumSet.allOf(EquipmentSlot.class));
+            ArmorCollection.registerArmorCollection(ArmorSets.TIMS_ARMOR, EnumSet.allOf(EquipmentSlot.class));
 }

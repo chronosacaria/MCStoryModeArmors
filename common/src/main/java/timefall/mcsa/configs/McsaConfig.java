@@ -25,36 +25,36 @@ public class McsaConfig implements ConfigData {
     // config contents:
     public EnumMap<ArmorSets, ArmorStats> armorStats = new EnumMap<>(ArmorSets.class);
 
-    @Comment("Character Armour Spawn Rate (Percentage where 1.0 = 100%)")
-    public float characterArmourSpawnRate = 0.15F;
+    @Comment("Character Armor Spawn Rate (Percentage where 1.0 = 100%)")
+    public float characterArmorSpawnRate = 0.15F;
 
-    public float getCharacterArmourSpawnRate(){
-        return characterArmourSpawnRate;
+    public float getCharacterArmorSpawnRate(){
+        return characterArmorSpawnRate;
     }
 
-    @Comment("Stronghold Armour Spawn Rate (Percentage where 1.0 = 100%)")
-    public float strongholdArmourSpawnRate = 0.1F;
+    @Comment("Stronghold Armor Spawn Rate (Percentage where 1.0 = 100%)")
+    public float strongholdArmorSpawnRate = 0.1F;
 
-    public float getStrongholdArmourSpawnRate(){
-        return strongholdArmourSpawnRate;
+    public float getStrongholdArmorSpawnRate(){
+        return strongholdArmorSpawnRate;
     }
 
-    @Comment("Temple Armour Spawn Rate (Percentage where 1.0 = 100%)")
-    public float templeArmourSpawnRate = 0.1F;
+    @Comment("Temple Armor Spawn Rate (Percentage where 1.0 = 100%)")
+    public float templeArmorSpawnRate = 0.1F;
 
-    public float getTempleArmourSpawnRate(){
-        return templeArmourSpawnRate;
+    public float getTempleArmorSpawnRate(){
+        return templeArmorSpawnRate;
     }
 
-    @Comment("Armourer Hero of the Village Gift Rate (Percentage where 1.0 = 100%)")
-    public float hovArmourSpawnRate = 0.15F;
+    @Comment("Armorer Hero of the Village Gift Rate (Percentage where 1.0 = 100%)")
+    public float hovArmorSpawnRate = 0.15F;
 
-    public float getHovArmourSpawnRate(){
-        return hovArmourSpawnRate;
+    public float getHovArmorSpawnRate(){
+        return hovArmorSpawnRate;
     }
 
-    @Comment("Enable Villager Armour Trades")
-    public boolean enableVillagerArmourTrades = false;
+    @Comment("Enable Villager Armor Trades")
+    public boolean enableVillagerArmorTrades = false;
 
     // convenience methods:
     protected ArmorStats setProtection(int head, int chest, int legs, int feet, ArmorSets set) {
@@ -90,7 +90,7 @@ public class McsaConfig implements ConfigData {
         setProtection(3, 8, 6, 3, ArmorSets.IVOR).setToughness(2.0F);
         setProtection(3, 8, 6, 3, ArmorSets.LUKAS).setToughness(2.0F);
         setProtection(3, 8, 6, 3, ArmorSets.MAGNUS).setToughness(2.0F);
-        setProtection(3, 8, 6, 3, ArmorSets.NINJA_IVOR_ARMOUR).setToughness(1.0F);
+        setProtection(3, 8, 6, 3, ArmorSets.NINJA_IVOR_ARMOR).setToughness(1.0F);
         setProtection(3, 8, 6, 3, ArmorSets.OLIVIA).setToughness(2.0F);
         setProtection(3, 8, 6, 3, ArmorSets.PETRA).setToughness(2.0F);
         setProtection(3, 8, 6, 3, ArmorSets.PRISMARINE).setToughness(2.0F);
@@ -99,8 +99,7 @@ public class McsaConfig implements ConfigData {
         setProtection(3, 8, 6, 3, ArmorSets.SOREN).setToughness(2.0F);
         setProtection(4, 9, 7, 4, ArmorSets.STAR_SHIELD).setToughness(3.0F).setKnockbackRes(0.2F);
         setProtection(4, 9, 7, 4, ArmorSets.SWORDBREAKER).setToughness(2.0F).setKnockbackRes(0.5F);
-        setProtection(3, 8, 6, 3, ArmorSets.TIMS_ARMOUR).setToughness(2.0F);
-        //setProtection(1, 1, 1, 1, WHITE_PUMPKIN);
+        setProtection(3, 8, 6, 3, ArmorSets.TIMS_ARMOR).setToughness(2.0F);
         }
 
     }
