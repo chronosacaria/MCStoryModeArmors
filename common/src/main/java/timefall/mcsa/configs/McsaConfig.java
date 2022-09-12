@@ -12,6 +12,7 @@ import timefall.mcsa.items.armor.ArmorSets;
 
 import java.util.EnumMap;
 import java.util.EnumSet;
+import java.util.HashMap;
 
 @Config(name = Mcsa.MOD_ID)
 public class McsaConfig implements ConfigData {
@@ -25,31 +26,31 @@ public class McsaConfig implements ConfigData {
     // config contents:
     public EnumMap<ArmorSets, ArmorStats> armorStats = new EnumMap<>(ArmorSets.class);
 
-    @Comment("Character Armor Spawn Rate (Percentage where 1.0 = 100%)")
-    public float characterArmorSpawnRate = 0.15F;
+    @Comment("Character Armor Spawn Rate")
+    public int characterArmorSpawnRate = 15;
 
-    public float getCharacterArmorSpawnRate(){
+    public int getCharacterArmorSpawnRate(){
         return characterArmorSpawnRate;
     }
 
-    @Comment("Stronghold Armor Spawn Rate (Percentage where 1.0 = 100%)")
-    public float strongholdArmorSpawnRate = 0.1F;
+    @Comment("Stronghold Armor Spawn Rate")
+    public int strongholdArmorSpawnRate = 10;
 
-    public float getStrongholdArmorSpawnRate(){
+    public int getStrongholdArmorSpawnRate(){
         return strongholdArmorSpawnRate;
     }
 
-    @Comment("Temple Armor Spawn Rate (Percentage where 1.0 = 100%)")
-    public float templeArmorSpawnRate = 0.1F;
+    @Comment("Temple Armor Spawn Rate")
+    public int templeArmorSpawnRate = 10;
 
-    public float getTempleArmorSpawnRate(){
+    public int getTempleArmorSpawnRate(){
         return templeArmorSpawnRate;
     }
 
-    @Comment("Armorer Hero of the Village Gift Rate (Percentage where 1.0 = 100%)")
-    public float hovArmorSpawnRate = 0.15F;
+    @Comment("Armorer Hero of the Village Gift Rate")
+    public int hovArmorSpawnRate = 15;
 
-    public float getHovArmorSpawnRate(){
+    public int getHovArmorSpawnRate(){
         return hovArmorSpawnRate;
     }
 
@@ -61,9 +62,12 @@ public class McsaConfig implements ConfigData {
         return armorStats.get(set).setProtection(head, chest, legs, feet);
     }
 
+    public final HashMap<ArmorSets, Boolean> ARMOR_SETS_ENABLED = new HashMap<>();
+
     // set config defaults
     public McsaConfig() {
         for (ArmorSets armorSet : ArmorSets.values()) {
+            ARMOR_SETS_ENABLED.put(armorSet, true);
             armorStats.put(armorSet, new ArmorStats());
         }
 
@@ -101,5 +105,4 @@ public class McsaConfig implements ConfigData {
         setProtection(4, 9, 7, 4, ArmorSets.SWORDBREAKER).setToughness(2.0F).setKnockbackRes(0.5F);
         setProtection(3, 8, 6, 3, ArmorSets.TIMS_ARMOR).setToughness(2.0F);
         }
-
     }

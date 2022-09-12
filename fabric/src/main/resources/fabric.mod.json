@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "id": "mcsa",
   "version": "${version}",
-  "name": "MC Story Mode Armor",
-  "description": "Brings the armours from Minecraft Story Mode to Minecraft Java",
+  "name": "MC Story Mode Armors",
+  "description": "Brings the armors from Minecraft Story Mode to Minecraft Java.",
   "authors": [
     "chronosacaria"
   ],
@@ -12,7 +12,7 @@
     "sources": "https://github.com/chronosacaria/MCStoryModeArmors",
     "issues": "https://github.com/chronosacaria/MCStoryModeArmors/issues"
   },
-  "license": "MIT",
+  "license": "Timefall Development License",
   "icon": "assets/mcsa/icon.png",
   "environment": "*",
   "entrypoints": {

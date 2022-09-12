@@ -3,8 +3,9 @@ package timefall.mcsa.init;
 import dev.architectury.event.events.common.LootEvent;
 import net.minecraft.loot.LootPool;
 import net.minecraft.loot.LootTables;
+import net.minecraft.loot.condition.RandomChanceLootCondition;
 import net.minecraft.loot.entry.ItemEntry;
-import net.minecraft.loot.provider.number.BinomialLootNumberProvider;
+import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
 import net.minecraft.util.Identifier;
 import timefall.mcsa.collections.ArmorCollection;
 import timefall.mcsa.configs.McsaConfig;
@@ -31,6 +32,10 @@ public class LootInit {
     public static void init() {
         LootEvent.MODIFY_LOOT_TABLE.register((lootTables, id, context, builtin) -> {
         LootPool.Builder builder = LootPool.builder();
+
+        builder.rolls(ConstantLootNumberProvider.create(1));
+        builder.conditionally(RandomChanceLootCondition.builder(0.10f));
+
             if (VILLAGER_ARMORER_LOOT_TABLE.contains(id)) {
                 addArmorSet(builder, ArmorsInit.ELLEGAARD_ARMOR, McsaConfig.config.getCharacterArmorSpawnRate());
                 addArmorSet(builder, ArmorsInit.GABRIEL_ARMOR, McsaConfig.config.getCharacterArmorSpawnRate());
@@ -59,10 +64,7 @@ public class LootInit {
         });
     }
 
-    public static void addArmorSet(LootPool.Builder poolBuilder, ArmorCollection<ArmorSetItem> armorCollection, float p) {
-        armorCollection.getArmor().forEach(armorSetItem -> {
-            poolBuilder.rolls(BinomialLootNumberProvider.create(1, p));
-            poolBuilder.with(ItemEntry.builder(armorSetItem));
-        });
+    public static void addArmorSet(LootPool.Builder poolBuilder, ArmorCollection<ArmorSetItem> armorCollection, int p) {
+        armorCollection.getArmor().forEach(armorSetItem -> poolBuilder.with(ItemEntry.builder(armorSetItem).weight(p)));
     }
 }

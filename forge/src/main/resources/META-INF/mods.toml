@@ -1,15 +1,15 @@
 modLoader = "javafml"
 loaderVersion = "[40,)"
 issueTrackerURL = "https://github.com/chronosacaria/MCStoryModeArmors/issues"
-license = "MIT"
+license = "Timefall Development License"
 
 [[mods]]
 modId = "mcsa"
 version = "${version}"
-displayName = "MC Story Mode Armor"
+displayName = "MC Story Mode Armors"
 authors = "chronosacaria"
 description = '''
-Brings the armours from Minecraft Story Mode to Minecraft Java
+Brings the armors from Minecraft Story Mode to Minecraft Java.
 '''
 #logoFile = ""
 
