@@ -1,6 +1,5 @@
 package timefall.mcsa.mixin;
 
-import dev.architectury.event.events.common.ExplosionEvent;
 import net.minecraft.entity.AreaEffectCloudEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.boss.dragon.EnderDragonEntity;
