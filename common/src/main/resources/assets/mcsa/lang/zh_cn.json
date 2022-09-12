@@ -1,20 +1,21 @@
 {
-    "itemGroup.mcsa.armor"                            : "我的世界：故事模式盔甲",
+    "itemGroup.mcsa"                                  : "我的世界：故事模式盔甲",
+    "itemGroup.mcsa.group"                            : "我的世界：故事模式盔甲",
   
-    "item.mcsa.adamantium_impervium_helmet"           : "艾德曼抗渗金头盔",
-    "item.mcsa.adamantium_impervium_chestplate"       : "艾德曼抗渗金胸甲",
-    "item.mcsa.adamantium_impervium_leggings"         : "艾德曼抗渗金护腿",
-    "item.mcsa.adamantium_impervium_boots"            : "艾德曼抗渗金靴子",
+    "item.mcsa.adamantium_impervium_helmet"           : "亚德曼合抗渗金头盔",
+    "item.mcsa.adamantium_impervium_chestplate"       : "亚德曼合抗渗金胸甲",
+    "item.mcsa.adamantium_impervium_leggings"         : "亚德曼合抗渗金护腿",
+    "item.mcsa.adamantium_impervium_boots"            : "亚德曼合抗渗金靴子",
   
     "item.mcsa.champion_petra_helmet"                 : "冠军佩特拉头盔",
     "item.mcsa.champion_petra_chestplate"             : "冠军佩特拉胸甲",
     "item.mcsa.champion_petra_leggings"               : "冠军佩特拉护腿",
     "item.mcsa.champion_petra_boots"                  : "冠军佩特拉靴子",
   
-    "item.mcsa.dragonsbane_helmet"                    : "龙殇头盔",
-    "item.mcsa.dragonsbane_chestplate"                : "龙殇胸甲",
-    "item.mcsa.dragonsbane_leggings"                  : "龙殇护腿",
-    "item.mcsa.dragonsbane_boots"                     : "龙殇靴子",
+    "item.mcsa.dragonsbane_helmet"                    : "龙诛戮头盔",
+    "item.mcsa.dragonsbane_chestplate"                : "龙诛戮胸甲",
+    "item.mcsa.dragonsbane_leggings"                  : "龙诛戮护腿",
+    "item.mcsa.dragonsbane_boots"                     : "龙诛戮靴子",
   
     "item.mcsa.ellegaard_helmet"                      : "艾勒卡德的头盔",
     "item.mcsa.ellegaard_chestplate"                  : "艾勒卡德的胸甲",
@@ -26,25 +27,25 @@
     "item.mcsa.ender_defender_leggings"               : "末影守卫者护腿",
     "item.mcsa.ender_defender_boots"                  : "末影守卫者靴子",
   
-    "item.mcsa.enderman_soren_helmet"                 : "索伦的末影人头盔",
-    "item.mcsa.enderman_soren_chestplate"             : "索伦的末影人胸甲",
-    "item.mcsa.enderman_soren_leggings"               : "索伦的末影人护腿",
-    "item.mcsa.enderman_soren_boots"                  : "索伦的末影人靴子",
+    "item.mcsa.enderman_soren_helmet"                 : "索伦的末影人服装头盔",
+    "item.mcsa.enderman_soren_chestplate"             : "索伦的末影人服装胸甲",
+    "item.mcsa.enderman_soren_leggings"               : "索伦的末影人服装护腿",
+    "item.mcsa.enderman_soren_boots"                  : "索伦的末影人服装靴子",
   
     "item.mcsa.gabriel_helmet"                        : "加布里埃尔的头盔",
     "item.mcsa.gabriel_chestplate"                    : "加布里埃尔的胸甲",
     "item.mcsa.gabriel_leggings"                      : "加布里埃尔的护腿",
     "item.mcsa.gabriel_boots"                         : "加布里埃尔的靴子",
   
-    "item.mcsa.golden_goliath_helmet"                 : "哥利亚金头盔",
-    "item.mcsa.golden_goliath_chestplate"             : "哥利亚金胸甲",
-    "item.mcsa.golden_goliath_leggings"               : "哥利亚金护腿",
-    "item.mcsa.golden_goliath_boots"                  : "哥利亚金靴子",
+    "item.mcsa.golden_goliath_helmet"                 : "金巨人头盔头盔",
+    "item.mcsa.golden_goliath_chestplate"             : "金巨人头盔胸甲",
+    "item.mcsa.golden_goliath_leggings"               : "金巨人头盔护腿",
+    "item.mcsa.golden_goliath_boots"                  : "金巨人头盔靴子",
   
-    "item.mcsa.golden_goliath_circuitry_helmet"       : "带电哥利亚金头盔",
-    "item.mcsa.golden_goliath_circuitry_chestplate"   : "带电哥利亚金胸甲",
-    "item.mcsa.golden_goliath_circuitry_leggings"     : "带电哥利亚金护腿",
-    "item.mcsa.golden_goliath_circuitry_boots"        : "带电哥利亚金靴子",
+    "item.mcsa.golden_goliath_circuitry_helmet"       : "金巨人电路头盔头盔",
+    "item.mcsa.golden_goliath_circuitry_chestplate"   : "金巨人电路头盔胸甲",
+    "item.mcsa.golden_goliath_circuitry_leggings"     : "金巨人电路头盔护腿",
+    "item.mcsa.golden_goliath_circuitry_boots"        : "金巨人电路头盔靴子",
   
     "item.mcsa.harpers_headset_helmet"                : "哈珀的耳机",
   
@@ -83,10 +84,10 @@
     "item.mcsa.prismarine_soldier_leggings"           : "海晶士兵护腿",
     "item.mcsa.prismarine_soldier_boots"              : "海晶士兵靴子",
   
-    "item.mcsa.redstone_riot_helmet"                  : "红石狂暴头盔",
-    "item.mcsa.redstone_riot_chestplate"              : "红石狂暴胸甲",
-    "item.mcsa.redstone_riot_leggings"                : "红石狂暴护腿",
-    "item.mcsa.redstone_riot_boots"                   : "红石狂暴靴子",
+    "item.mcsa.redstone_riot_helmet"                  : "红石暴动头盔",
+    "item.mcsa.redstone_riot_chestplate"              : "红石暴动胸甲",
+    "item.mcsa.redstone_riot_leggings"                : "红石暴动护腿",
+    "item.mcsa.redstone_riot_boots"                   : "红石暴动靴子",
   
     "item.mcsa.shield_of_infinity_helmet"             : "无限之盾头盔",
     "item.mcsa.shield_of_infinity_chestplate"         : "无限之盾胸甲",
@@ -113,6 +114,6 @@
     "item.mcsa.tim_leggings"                          : "蒂姆的护腿",
     "item.mcsa.tim_boots"                             : "蒂姆的靴子",
   
-    "block.mcsa.white_pumpkin"                        : "白南瓜头",
-    "block.mcsa.carved_white_pumpkin"                 : "雕刻过的白南瓜头"
+    "block.mcsa.white_pumpkin"                        : "白南瓜",
+    "block.mcsa.carved_white_pumpkin"                 : "雕刻过的白南瓜"
   }
