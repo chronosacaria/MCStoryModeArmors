@@ -18,6 +18,7 @@ import net.minecraft.world.World;
 import timefall.mcsa.Mcsa;
 import timefall.mcsa.configs.ArmorStats;
 import timefall.mcsa.configs.McsaConfig;
+import timefall.mcsa.init.BlocksInit;
 
 import java.util.Map;
 import java.util.UUID;
@@ -30,7 +31,6 @@ public class ArmorSetItem extends ArmorItem {
                             new StatusEffectInstance(StatusEffects.WATER_BREATHING, 200, 0))
                     .put(ArmorSets.PRISMARINE,
                             new StatusEffectInstance(StatusEffects.WATER_BREATHING, 200, 0))
-
                     .build();
 
     private static final UUID[] ARMOR_MODIFIERS = new UUID[]{
@@ -116,13 +116,16 @@ public class ArmorSetItem extends ArmorItem {
     }
 
     private boolean hasCorrectArmorOn(ArmorSets armorSet, PlayerEntity playerEntity) {
-        ArmorSetItem bootsStack = ((ArmorSetItem)playerEntity.getInventory().getArmorStack(0).getItem());
-        ArmorSetItem leggingsStack = ((ArmorSetItem)playerEntity.getInventory().getArmorStack(1).getItem());
-        ArmorSetItem chestplateStack = ((ArmorSetItem)playerEntity.getInventory().getArmorStack(2).getItem());
-        ArmorSetItem helmetStack = ((ArmorSetItem)playerEntity.getInventory().getArmorStack(3).getItem());
+        if (!(playerEntity.getEquippedStack(EquipmentSlot.HEAD).isOf(BlocksInit.CARVED_WHITE_PUMPKIN_BLOCK.get().asItem()))) {
+            ArmorSetItem bootsStack = ((ArmorSetItem)playerEntity.getInventory().getArmorStack(0).getItem());
+            ArmorSetItem leggingsStack = ((ArmorSetItem)playerEntity.getInventory().getArmorStack(1).getItem());
+            ArmorSetItem chestplateStack = ((ArmorSetItem)playerEntity.getInventory().getArmorStack(2).getItem());
+            ArmorSetItem helmetStack = ((ArmorSetItem)playerEntity.getInventory().getArmorStack(3).getItem());
 
-        return helmetStack.getMaterial() == armorSet && chestplateStack.getMaterial() == armorSet
-                && leggingsStack.getMaterial() == armorSet && bootsStack.getMaterial() == armorSet;
+            return helmetStack.getMaterial() == armorSet && chestplateStack.getMaterial() == armorSet
+                    && leggingsStack.getMaterial() == armorSet && bootsStack.getMaterial() == armorSet;
+        }
+        return false;
     }
 
 }
