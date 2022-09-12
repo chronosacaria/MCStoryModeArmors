@@ -16,8 +16,6 @@ public class CleanlinessHelper {
             ItemStack legStack = livingEntity.getEquippedStack(EquipmentSlot.LEGS);
             ItemStack footStack = livingEntity.getEquippedStack(EquipmentSlot.FEET);
 
-
-
             return headStack.isOf(armorCollection.getHelmet())
                     && chestStack.isOf(armorCollection.getChestplate())
                     && legStack.isOf(armorCollection.getLeggings())
