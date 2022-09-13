@@ -117,13 +117,16 @@ public class ArmorSetItem extends ArmorItem {
 
     private boolean hasCorrectArmorOn(ArmorSets armorSet, PlayerEntity playerEntity) {
         if (!(playerEntity.getEquippedStack(EquipmentSlot.HEAD).isOf(BlocksInit.CARVED_WHITE_PUMPKIN_BLOCK.get().asItem()))) {
-            ArmorSetItem bootsStack = ((ArmorSetItem)playerEntity.getInventory().getArmorStack(0).getItem());
-            ArmorSetItem leggingsStack = ((ArmorSetItem)playerEntity.getInventory().getArmorStack(1).getItem());
-            ArmorSetItem chestplateStack = ((ArmorSetItem)playerEntity.getInventory().getArmorStack(2).getItem());
-            ArmorSetItem helmetStack = ((ArmorSetItem)playerEntity.getInventory().getArmorStack(3).getItem());
-
-            return helmetStack.getMaterial() == armorSet && chestplateStack.getMaterial() == armorSet
-                    && leggingsStack.getMaterial() == armorSet && bootsStack.getMaterial() == armorSet;
+           if(playerEntity.getInventory().getArmorStack(0).getItem() instanceof ArmorSetItem bootsStack) {
+               if (playerEntity.getInventory().getArmorStack(1).getItem() instanceof ArmorSetItem leggingsStack) {
+                   if (playerEntity.getInventory().getArmorStack(2).getItem() instanceof ArmorSetItem chestplateStack) {
+                       if (playerEntity.getInventory().getArmorStack(3).getItem() instanceof ArmorSetItem helmetStack) {
+                           return helmetStack.getMaterial() == armorSet && chestplateStack.getMaterial() == armorSet
+                                   && leggingsStack.getMaterial() == armorSet && bootsStack.getMaterial() == armorSet;
+                       }
+                   }
+               }
+           }
         }
         return false;
     }
