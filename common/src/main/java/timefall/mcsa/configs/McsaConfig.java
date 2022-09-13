@@ -57,6 +57,9 @@ public class McsaConfig implements ConfigData {
     @Comment("Enable Villager Armor Trades")
     public boolean enableVillagerArmorTrades = false;
 
+    @Comment("Enable Armor Set Bonus Tooltips")
+    public boolean enableArmorSetBonusTooltips = true;
+
     // convenience methods:
     protected ArmorStats setProtection(int head, int chest, int legs, int feet, ArmorSets set) {
         return armorStats.get(set).setProtection(head, chest, legs, feet);

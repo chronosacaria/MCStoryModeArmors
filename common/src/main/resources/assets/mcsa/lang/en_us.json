@@ -2,10 +2,10 @@
   "itemGroup.mcsa"                                  : "MC Story Mode Armors",
   "itemGroup.mcsa.group"                            : "MC Story Mode Armors",
 
-  "item.mcsa.adamantium_impervium_helmet"           : "Adamantium Impervium Helmet",
-  "item.mcsa.adamantium_impervium_chestplate"       : "Adamantium Impervium Chestplate",
-  "item.mcsa.adamantium_impervium_leggings"         : "Adamantium Impervium Leggings",
-  "item.mcsa.adamantium_impervium_boots"            : "Adamantium Impervium Boots",
+  "item.mcsa.adamantium_impervium_helmet"           : "Adamantine Impervium Helmet",
+  "item.mcsa.adamantium_impervium_chestplate"       : "Adamantine Impervium Chestplate",
+  "item.mcsa.adamantium_impervium_leggings"         : "Adamantine Impervium Leggings",
+  "item.mcsa.adamantium_impervium_boots"            : "Adamantine Impervium Boots",
 
   "item.mcsa.champion_petra_helmet"                 : "Champion Petra Helmet",
   "item.mcsa.champion_petra_chestplate"             : "Champion Petra Chestplate",
@@ -115,5 +115,41 @@
   "item.mcsa.tim_boots"                             : "Tim's Boots",
 
   "block.mcsa.white_pumpkin"                        : "White Pumpkin",
-  "block.mcsa.carved_white_pumpkin"                 : "Carved White Pumpkin"
+  "block.mcsa.carved_white_pumpkin"                 : "Carved White Pumpkin",
+
+  "item.mcsa.adamantium_impervium.tooltip_1"        : "The Adamantine Impervium! Even harder",
+  "item.mcsa.adamantium_impervium.tooltip_2"        : "damage than it is to pronounce!",
+
+  "item.mcsa.ender_defender.tooltip_1"              : "The Ender Defender! Very strong against",
+  "item.mcsa.ender_defender.tooltip_2"              : "an Enderman's attack.",
+
+  "item.mcsa.golden_goliath.tooltip_1"              : "The Golden Goliath! As bright and",
+  "item.mcsa.golden_goliath.tooltip_2"              : "powerful as the Sun itself!",
+
+  "item.mcsa.golden_goliath_circuitry.tooltip_1"    : "It is a shadow of its former glory.",
+
+  "item.mcsa.redstone_riot.tooltip_1"               : "The Redstone Riot! Engineered to be",
+  "item.mcsa.redstone_riot.tooltip_2"               : "virtually indestructible!",
+
+  "item.mcsa.shield_of_infinity.tooltip_1"          : "The Shield of Infinity! In no small",
+  "item.mcsa.shield_of_infinity.tooltip_2"          : "part because it's infinitely cool!",
+
+  "item.mcsa.star_shield.tooltip_1"                 : "The Star Shield! No object in the",
+  "item.mcsa.star_shield.tooltip_2"                 : "Universe can penetrate it!",
+
+  "item.mcsa.swordbreaker.tooltip_1"               : "The Swordbreaker! All but the",
+  "item.mcsa.swordbreaker.tooltip_2"               : "strongest of weapons would shatter",
+  "item.mcsa.swordbreaker.tooltip_3"               : "against it!",
+
+  "item.mcsa.gap.tooltip_"                          : " ",
+
+  "item.mcsa.adamantium_impervium.effect.tooltip_1" : "Armor Set Effect: Adamantine Guard",
+  "item.mcsa.dragonsbane.effect.tooltip_1"          : "Armor Set Effect: Dragonslayer",
+  "item.mcsa.ender_defender.effect.tooltip_1"       : "Armor Set Effect: Liberator of the End",
+  "item.mcsa.golden_goliath.effect.tooltip_1"       : "Armor Set Effect: Praise the Sun",
+  "item.mcsa.redstone_riot.effect.tooltip_1"        : "Armor Set Effect: Redstone Engineering",
+  "item.mcsa.shield_of_infinity.effect.tooltip_1"   : "Armor Set Effect: Infinite Defense",
+  "item.mcsa.star_shield.effect.tooltip_1"          : "Armor Set Effect: Universal Protection",
+  "item.mcsa.sword_breaker.effect.tooltip_1"        : "Armor Set Effect: Blade Shatter"
+
 }

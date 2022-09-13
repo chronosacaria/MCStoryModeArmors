@@ -3,6 +3,8 @@ package timefall.mcsa.items.armor;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
+import net.minecraft.client.item.TooltipContext;
+import net.minecraft.client.resource.language.I18n;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.attribute.EntityAttribute;
@@ -13,6 +15,8 @@ import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ItemStack;
+import net.minecraft.text.Text;
+import net.minecraft.util.Formatting;
 import net.minecraft.util.Rarity;
 import net.minecraft.world.World;
 import timefall.mcsa.Mcsa;
@@ -20,6 +24,7 @@ import timefall.mcsa.configs.ArmorStats;
 import timefall.mcsa.configs.McsaConfig;
 import timefall.mcsa.init.BlocksInit;
 
+import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
@@ -126,6 +131,41 @@ public class ArmorSetItem extends ArmorItem {
                     && leggingsStack.getMaterial() == armorSet && bootsStack.getMaterial() == armorSet;
         }
         return false;
+    }
+
+    @Override
+    public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext) {
+        super.appendTooltip(itemStack, world, tooltip, tooltipContext);
+
+        String setId = set.getSetName();
+
+        String translationKey = String.format("item.mcsa.%s.tooltip_", setId);
+        int i = 1;
+
+        while (I18n.hasTranslation(translationKey + i)) {
+            tooltip.add(Text.translatable(translationKey + i).formatted(Formatting.ITALIC));
+            i++;
+        }
+
+        if (McsaConfig.config.enableArmorSetBonusTooltips) {
+            translationKey = String.format("item.mcsa.%s.effect.tooltip_", setId);
+            i = 1;
+
+            while (I18n.hasTranslation(translationKey + i)) {
+                tooltip.add(Text.translatable(translationKey + i).formatted(
+                        switch (set) {
+                            case GOLDEN_GOLIATH -> Formatting.GOLD;
+                            case REDSTONE_RIOT -> Formatting.RED;
+                            case ENDER_DEFENDER -> Formatting.AQUA;
+                            case SWORDBREAKER, STAR_SHIELD -> Formatting.BLUE;
+                            case SHIELD_OF_INFINITY -> Formatting.LIGHT_PURPLE;
+                            case DRAGONSBANE -> Formatting.DARK_PURPLE;
+                            case ADAMANTIUM -> Formatting.YELLOW;
+                            default -> Formatting.GRAY;
+                        }));
+                i++;
+            }
+        }
     }
 
 }
