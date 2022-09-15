@@ -6,99 +6,132 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.boss.dragon.EnderDragonEntity;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.mob.EndermanEntity;
-import net.minecraft.item.*;
+import net.minecraft.entity.mob.Monster;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.AxeItem;
+import net.minecraft.item.Items;
+import net.minecraft.item.SwordItem;
+import net.minecraft.item.ToolItem;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import timefall.mcsa.api.CleanlinessHelper;
+import timefall.mcsa.configs.McsaConfig;
+import timefall.mcsa.enums.ArmorEffectID;
 import timefall.mcsa.init.ArmorsInit;
 import timefall.mcsa.items.armor.ArmorSets;
 
-@Mixin(LivingEntity.class)
+@Mixin({LivingEntity.class, PlayerEntity.class})
 public class LivingEntityMixin {
 
     @Inject(method = "damage", at = @At("HEAD"), cancellable = true)
-    public void mcsa$cancelBreathDamage(DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir) {
-        LivingEntity livingEntity = (LivingEntity) (Object) this;
+    public void mcsa$damageReceivedInjections(DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir) {
 
-        if (CleanlinessHelper.hasArmorSet(livingEntity, ArmorsInit.DRAGONSBANE, ArmorSets.DRAGONSBANE)) {
-            if (source.getSource() instanceof AreaEffectCloudEntity areaEffectCloudEntity && areaEffectCloudEntity.getOwner() instanceof EnderDragonEntity) {
-                cir.setReturnValue(false);
+        if ((Object) this instanceof LivingEntity livingEntity) {
+            if (McsaConfig.config.enableArmorEffect.get(ArmorEffectID.DRAGONSLAYER)) {
+                if (CleanlinessHelper.hasArmorSet(livingEntity, ArmorsInit.DRAGONSBANE, ArmorSets.DRAGONSBANE)) {
+                    if (source.getSource() instanceof AreaEffectCloudEntity areaEffectCloudEntity && areaEffectCloudEntity.getOwner() instanceof EnderDragonEntity) {
+                        cir.setReturnValue(false);
+                    }
+                }
+            }
+
+            if (McsaConfig.config.enableArmorEffect.get(ArmorEffectID.INFINITE_DEFENSE)) {
+                if (CleanlinessHelper.hasArmorSet(livingEntity, ArmorsInit.SHIELD_OF_INFINITY, ArmorSets.SHIELD_OF_INFINITY)) {
+                    if (livingEntity.getAttacker() != null
+                            && (livingEntity.getAttacker().getMainHandStack().getItem() instanceof ToolItem
+                            || source.getAttacker() instanceof LivingEntity)) {
+                        cir.setReturnValue(false);
+                    }
+                }
+            }
+
+            if (McsaConfig.config.enableArmorEffect.get(ArmorEffectID.UNIVERSAL_PROTECTION)) {
+                if (CleanlinessHelper.hasArmorSet(livingEntity, ArmorsInit.STAR_SHIELD, ArmorSets.STAR_SHIELD)) {
+                    if (livingEntity.getAttacker() != null
+                            && (!(livingEntity.getAttacker().getMainHandStack().isOf(Items.NETHERITE_AXE)
+                            || livingEntity.getAttacker().getMainHandStack().isOf(Items.NETHERITE_SWORD)))) {
+                        cir.setReturnValue(true);
+                    }
+                }
             }
         }
     }
 
     @ModifyVariable(method = "damage", at = @At(value = "HEAD"), argsOnly = true)
     public float mcsa$damageModifiers(float amount, DamageSource source) {
-        if (!(source.getAttacker() instanceof LivingEntity armoredEntity)) {
+        if (!(source.getAttacker() instanceof LivingEntity attacker)) {
             return amount;
         }
 
-        LivingEntity target = (LivingEntity) (Object) this;
+        LivingEntity damagedEntity = (LivingEntity) (Object) this;
 
-        if (CleanlinessHelper.hasArmorSet(armoredEntity, ArmorsInit.ADAMANTIUM_ARMOR, ArmorSets.ADAMANTIUM)) {
-            if (armoredEntity.getMainHandStack() != null
-                    && armoredEntity.getMainHandStack().getItem() instanceof ToolItem || source.isProjectile())
-                return amount * 0.10f;
-        }
-
-        if (CleanlinessHelper.hasArmorSet(armoredEntity, ArmorsInit.DRAGONSBANE, ArmorSets.DRAGONSBANE)) {
-            if (target instanceof EnderDragonEntity)
-                return amount * 1.25f;
-        }
-
-        if (CleanlinessHelper.hasArmorSet(armoredEntity, ArmorsInit.ENDER_DEFENDER, ArmorSets.ENDER_DEFENDER)) {
-            if (target instanceof EndermanEntity)
-                return amount * 1.5f;
-        }
-
-        if (CleanlinessHelper.hasArmorSet(armoredEntity, ArmorsInit.GOLDEN_GOLIATH_ARMOR, ArmorSets.GOLDEN_GOLIATH)) {
-            // If it is day or the moon is full
-            if (armoredEntity.getWorld().isDay() || armoredEntity.getWorld().getMoonPhase() == 1
-                    // If the player can see the sky (i.e. is not in a cave or underground)
-                && armoredEntity.getWorld().isSkyVisible(armoredEntity.getBlockPos())) {
-                target.setOnFireFor(5);
-                return amount * 2f;
-            } else {
-                return amount * 0.5f;
+        if (McsaConfig.config.enableArmorEffect.get(ArmorEffectID.ADAMANTINE_GUARD)) {
+            if (CleanlinessHelper.hasArmorSet(damagedEntity, ArmorsInit.ADAMANTIUM_ARMOR, ArmorSets.ADAMANTIUM)) {
+                if (!source.isOutOfWorld()) {
+                    return amount * 0.10f;
+                }
             }
         }
 
-        if (CleanlinessHelper.hasArmorSet(armoredEntity, ArmorsInit.MAGNUS_ARMOR, ArmorSets.MAGNUS)) {
-            if (source.isExplosive())
-                return amount / 2;
-        }
-
-        if (CleanlinessHelper.hasArmorSet(armoredEntity, ArmorsInit.REDSTONE_RIOT, ArmorSets.REDSTONE_RIOT)) {
-            if (armoredEntity.getAttacker() != null
-                    && armoredEntity.getAttacker().getMainHandStack() != null
-                    && armoredEntity.getAttacker().getMainHandStack().getItem() instanceof ToolItem || source.isProjectile())
-                return amount * 0.25f;
-        }
-
-        if (CleanlinessHelper.hasArmorSet(armoredEntity, ArmorsInit.STAR_SHIELD, ArmorSets.STAR_SHIELD)) {
-            if (armoredEntity.getAttacker() != null
-                    && armoredEntity.getAttacker().getMainHandStack() != null
-                    && (armoredEntity.getAttacker().getMainHandStack().isOf(Items.NETHERITE_AXE) || armoredEntity.getAttacker().getMainHandStack().isOf(Items.NETHERITE_SWORD))) {
-                return amount * 0;
+        if (McsaConfig.config.enableArmorEffect.get(ArmorEffectID.DRAGONSLAYER)) {
+            if (CleanlinessHelper.hasArmorSet(attacker, ArmorsInit.DRAGONSBANE, ArmorSets.DRAGONSBANE)) {
+                if (damagedEntity instanceof EnderDragonEntity)
+                    return amount * 1.25f;
             }
         }
 
-        if (CleanlinessHelper.hasArmorSet(armoredEntity, ArmorsInit.SWORDBREAKER, ArmorSets.SWORDBREAKER)) {
-            if (armoredEntity.getAttacker() != null
-                    && armoredEntity.getAttacker().getMainHandStack() != null
-                    && armoredEntity.getAttacker().getMainHandStack().getItem() instanceof SwordItem) {
-                armoredEntity.getAttacker().getMainHandStack().damage(50, armoredEntity.getAttacker(), (entity) -> armoredEntity.getAttacker().sendEquipmentBreakStatus(EquipmentSlot.MAINHAND));
-                return amount * 0;
+        if (McsaConfig.config.enableArmorEffect.get(ArmorEffectID.LIBERATOR_OF_THE_END)) {
+            if (CleanlinessHelper.hasArmorSet(attacker, ArmorsInit.ENDER_DEFENDER, ArmorSets.ENDER_DEFENDER)) {
+                if (damagedEntity instanceof EndermanEntity)
+                    return amount * 1.5f;
             }
-            if (armoredEntity.getAttacker() != null
-                    && armoredEntity.getAttacker().getMainHandStack() != null
-                    && armoredEntity.getAttacker().getMainHandStack().getItem() instanceof AxeItem) {
-                armoredEntity.getAttacker().getMainHandStack().damage(1, armoredEntity.getAttacker(), (entity) -> armoredEntity.getAttacker().sendEquipmentBreakStatus(EquipmentSlot.MAINHAND));
-                return amount * 1.25f;
+        }
+
+        if (McsaConfig.config.enableArmorEffect.get(ArmorEffectID.PRAISE_THE_SUN)) {
+            if (CleanlinessHelper.hasArmorSet(attacker, ArmorsInit.GOLDEN_GOLIATH_ARMOR, ArmorSets.GOLDEN_GOLIATH)) {
+                // If it is day or the moon is full
+                if (attacker.getWorld().isDay() || attacker.getWorld().getMoonPhase() == 1
+                        // If the player can see the sky (i.e. is not in a cave or underground)
+                        && attacker.getWorld().isSkyVisible(attacker.getBlockPos())) {
+                    damagedEntity.setOnFireFor(5);
+                    return amount * 2f;
+                } else {
+                    return amount * 0.5f;
+                }
+            }
+        }
+
+        if (McsaConfig.config.enableArmorEffect.get(ArmorEffectID.BLASTING_CREW)) {
+            if (CleanlinessHelper.hasArmorSet(damagedEntity, ArmorsInit.MAGNUS_ARMOR, ArmorSets.MAGNUS)) {
+                if (source.isExplosive())
+                    return amount / 2;
+            }
+        }
+
+        if (McsaConfig.config.enableArmorEffect.get(ArmorEffectID.REDSTONE_ENGINEERING)) {
+            if (CleanlinessHelper.hasArmorSet(damagedEntity, ArmorsInit.REDSTONE_RIOT, ArmorSets.REDSTONE_RIOT)) {
+                if (attacker.getAttacker() != null
+                        && (attacker.getAttacker().getMainHandStack().getItem() instanceof ToolItem
+                        || source.isProjectile() || source.getSource() instanceof Monster))
+                    return amount * 0.25f;
+            }
+        }
+
+        if (McsaConfig.config.enableArmorEffect.get(ArmorEffectID.BLADE_SHATTER)) {
+            if (CleanlinessHelper.hasArmorSet(damagedEntity, ArmorsInit.SWORDBREAKER, ArmorSets.SWORDBREAKER)) {
+                if (attacker.getMainHandStack() != null && attacker.getMainHandStack().getItem() instanceof SwordItem) {
+                    attacker.getMainHandStack().damage(50, attacker,
+                            (entity) -> attacker.sendEquipmentBreakStatus(EquipmentSlot.MAINHAND));
+                    return amount * 0;
+                }
+                if (attacker.getMainHandStack() != null && attacker.getMainHandStack().getItem() instanceof AxeItem) {
+                    attacker.getMainHandStack().damage(1, attacker,
+                            (entity) -> attacker.sendEquipmentBreakStatus(EquipmentSlot.MAINHAND));
+                    return amount * 1.25f;
+                }
             }
         }
         return amount;

@@ -1,0 +1,13 @@
+package timefall.mcsa.enums;
+
+public enum ArmorEffectID {
+    ADAMANTINE_GUARD,
+    BLADE_SHATTER,
+    BLASTING_CREW,
+    DRAGONSLAYER,
+    INFINITE_DEFENSE,
+    LIBERATOR_OF_THE_END,
+    PRAISE_THE_SUN,
+    REDSTONE_ENGINEERING,
+    UNIVERSAL_PROTECTION
+}

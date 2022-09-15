@@ -170,5 +170,4 @@ public class ArmorSetItem extends ArmorItem {
             }
         }
     }
-
 }

@@ -8,11 +8,11 @@ import me.shedaniel.autoconfig.serializer.JanksonConfigSerializer;
 import me.shedaniel.cloth.clothconfig.shadowed.blue.endless.jankson.Comment;
 import net.minecraft.entity.EquipmentSlot;
 import timefall.mcsa.Mcsa;
+import timefall.mcsa.enums.ArmorEffectID;
 import timefall.mcsa.items.armor.ArmorSets;
 
 import java.util.EnumMap;
 import java.util.EnumSet;
-import java.util.HashMap;
 
 @Config(name = Mcsa.MOD_ID)
 public class McsaConfig implements ConfigData {
@@ -24,7 +24,6 @@ public class McsaConfig implements ConfigData {
     }
 
     // config contents:
-    public EnumMap<ArmorSets, ArmorStats> armorStats = new EnumMap<>(ArmorSets.class);
 
     @Comment("Character Armor Spawn Rate")
     public int characterArmorSpawnRate = 15;
@@ -60,19 +59,29 @@ public class McsaConfig implements ConfigData {
     @Comment("Enable Armor Set Bonus Tooltips")
     public boolean enableArmorSetBonusTooltips = true;
 
+    @Comment("You may wish to disable Infinite Defense in a PvP Environment, as it can be quite powerful.\n" +
+            "Adamantine Guard, Adamantine Impervium: Reduce all damage to 10% of incoming damage\n" +
+            "Blade Shatter, Swordbreaker: Can only be damaged by non-sword type weapons, axe type weapons do extra damage\n" +
+            "Blasting Crew, Magnus Armor: Protection from explosions, reducing damage by half\n" +
+            "Dragon Slayer, Dragonsbane: Immunity to the Ender Dragon's breath attack, 25% extra damage to the Ender Dragon\n" +
+            "Infinite Defense, Shield of Defense: A high chance to negate all incoming damage from all sources\n" +
+            "Liberator of the End, Ender Defender: 50% extra damage to Endermen\n" +
+            "Praise the Sun, Golden Goliath: When it is day or a full moon, and you can see the sky, you deal double damage and set enemies on fire. Otherwise, you deal half damage\n" +
+            "Redstone Engineering, Redstone Riot: Reduce all damage to 25% of incoming damage\n" +
+            "Universal Protection, Star Shield: You can only be damaged by Netherite Weapons")
+    public EnumMap<ArmorEffectID, Boolean> enableArmorEffect = new EnumMap<>(ArmorEffectID.class);
+
+    public EnumMap<ArmorSets, ArmorStats> armorStats = new EnumMap<>(ArmorSets.class);
+
     // convenience methods:
     protected ArmorStats setProtection(int head, int chest, int legs, int feet, ArmorSets set) {
         return armorStats.get(set).setProtection(head, chest, legs, feet);
     }
 
-    public final HashMap<ArmorSets, Boolean> ARMOR_SETS_ENABLED = new HashMap<>();
-
     // set config defaults
     public McsaConfig() {
-        for (ArmorSets armorSet : ArmorSets.values()) {
-            ARMOR_SETS_ENABLED.put(armorSet, true);
-            armorStats.put(armorSet, new ArmorStats());
-        }
+        for (ArmorEffectID armorEffectID : ArmorEffectID.values())
+            enableArmorEffect.put(armorEffectID, true);
 
         for (ArmorSets armorSet : ArmorSets.values()) {
             ArmorStats stats = new ArmorStats();
@@ -80,7 +89,6 @@ public class McsaConfig implements ConfigData {
             for (EquipmentSlot slot : EnumSet.of(EquipmentSlot.HEAD, EquipmentSlot.CHEST, EquipmentSlot.LEGS, EquipmentSlot.FEET)) {
                 stats.protection.put(slot, 0);
             }
-
             this.armorStats.put(armorSet, stats);
         }
 

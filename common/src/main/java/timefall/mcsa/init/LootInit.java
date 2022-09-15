@@ -8,6 +8,7 @@ import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
 import net.minecraft.util.Identifier;
 import timefall.mcsa.collections.ArmorCollection;
+import timefall.mcsa.collections.ArmorCollectionHelmetOnly;
 import timefall.mcsa.configs.McsaConfig;
 import timefall.mcsa.items.armor.ArmorSetItem;
 
@@ -45,6 +46,7 @@ public class LootInit {
                 addArmorSet(builder, ArmorsInit.OLIVIA_ARMOR, McsaConfig.config.getCharacterArmorSpawnRate());
                 addArmorSet(builder, ArmorsInit.PETRA_ARMOR, McsaConfig.config.getCharacterArmorSpawnRate());
                 addArmorSet(builder, ArmorsInit.SOREN_ARMOR, McsaConfig.config.getCharacterArmorSpawnRate());
+                addArmorSet(builder, ArmorsInit.HARPERS_HEADSET, McsaConfig.config.getCharacterArmorSpawnRate());
                 addArmorSet(builder, ArmorsInit.TIM_ARMOR, McsaConfig.config.getCharacterArmorSpawnRate());
             } else if (STRONGHOLD_LOOT_TABLES.contains(id)) {
                 addArmorSet(builder, ArmorsInit.DRAGONSBANE, McsaConfig.config.getStrongholdArmorSpawnRate());
@@ -52,6 +54,7 @@ public class LootInit {
                 addArmorSet(builder, ArmorsInit.GOLDEN_GOLIATH_ARMOR, McsaConfig.config.getStrongholdArmorSpawnRate());
                 addArmorSet(builder, ArmorsInit.GOLDEN_GOLIATH_CIRCUITRY_ARMOR, McsaConfig.config.getStrongholdArmorSpawnRate());
                 addArmorSet(builder, ArmorsInit.REDSTONE_RIOT, McsaConfig.config.getStrongholdArmorSpawnRate());
+                addArmorSet(builder, ArmorsInit.PRISMARINE_SOLDIER_ARMOR, McsaConfig.config.getStrongholdArmorSpawnRate());
             } else if (TEMPLE_LOOT_TABLES.contains(id)) {
                 addArmorSet(builder, ArmorsInit.SHIELD_OF_INFINITY, McsaConfig.config.getTempleArmorSpawnRate());
                 addArmorSet(builder, ArmorsInit.STAR_SHIELD, McsaConfig.config.getTempleArmorSpawnRate());
@@ -59,6 +62,7 @@ public class LootInit {
             } else if (ARMORER_GIFT_LOOT_TABLE.contains(id)) {
                 addArmorSet(builder, ArmorsInit.ADAMANTIUM_ARMOR, McsaConfig.config.getHovArmorSpawnRate());
                 addArmorSet(builder, ArmorsInit.CHAMPION_PETRA_ARMOR, McsaConfig.config.getHovArmorSpawnRate());
+                addArmorSet(builder, ArmorsInit.NINJA_IVOR_ARMOR, McsaConfig.config.getHovArmorSpawnRate());
             }
             context.addPool(builder.build());
         });
@@ -66,5 +70,9 @@ public class LootInit {
 
     public static void addArmorSet(LootPool.Builder poolBuilder, ArmorCollection<ArmorSetItem> armorCollection, int p) {
         armorCollection.getArmor().forEach(armorSetItem -> poolBuilder.with(ItemEntry.builder(armorSetItem).weight(p)));
+    }
+
+    public static void addArmorSet(LootPool.Builder poolBuilder, ArmorCollectionHelmetOnly<ArmorSetItem> armorCollection, int p) {
+        armorCollection.getArmorHelmetOnly().forEach(armorSetItem -> poolBuilder.with(ItemEntry.builder(armorSetItem).weight(p)));
     }
 }
