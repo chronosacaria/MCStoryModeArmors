@@ -3,6 +3,7 @@ package timefall.mcsa.collections;
 import com.google.common.collect.ImmutableList;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.entity.EquipmentSlot;
+import timefall.mcsa.configs.McsaConfig;
 import timefall.mcsa.factories.ArmorItemFactory;
 import timefall.mcsa.init.ArmorsInit;
 import timefall.mcsa.items.armor.ArmorSetItem;
@@ -29,12 +30,15 @@ public class ArmorCollection<T extends ArmorSetItem> {
     }
 
     public static <T extends ArmorSetItem> ArmorCollection<T> registerArmorCollection(ArmorSets sets, ArmorItemFactory<T> factory) {
-        return new ArmorCollection<>(
-                ArmorsInit.ARMOR.register(sets.getSetName() + "_helmet", () -> factory.create(sets, EquipmentSlot.HEAD)),
-                ArmorsInit.ARMOR.register(sets.getSetName() + "_chestplate", () -> factory.create(sets, EquipmentSlot.CHEST)),
-                ArmorsInit.ARMOR.register(sets.getSetName() + "_leggings", () -> factory.create(sets, EquipmentSlot.LEGS)),
-                ArmorsInit.ARMOR.register(sets.getSetName() + "_boots", () -> factory.create(sets, EquipmentSlot.FEET))
-        );
+        if (McsaConfig.config.ENABLE_ARMOR_SET.get(sets)) {
+            return new ArmorCollection<>(
+                    ArmorsInit.ARMOR.register(sets.getSetName() + "_helmet", () -> factory.create(sets, EquipmentSlot.HEAD)),
+                    ArmorsInit.ARMOR.register(sets.getSetName() + "_chestplate", () -> factory.create(sets, EquipmentSlot.CHEST)),
+                    ArmorsInit.ARMOR.register(sets.getSetName() + "_leggings", () -> factory.create(sets, EquipmentSlot.LEGS)),
+                    ArmorsInit.ARMOR.register(sets.getSetName() + "_boots", () -> factory.create(sets, EquipmentSlot.FEET))
+            );
+        }
+        return null;
     }
 
     public T getHelmet() {

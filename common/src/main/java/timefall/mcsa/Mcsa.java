@@ -25,7 +25,7 @@ public class Mcsa {
     // Registering a new creative tab
     public static final Identifier ITEM_GROUP_IDENTIFIER = new Identifier(MOD_ID, "group");
     public static final ItemGroup EXAMPLE_TAB = CreativeTabRegistry.create(ITEM_GROUP_IDENTIFIER, () ->
-            new ItemStack(ArmorsInit.ADAMANTIUM_ARMOR.getChestplate()));
+            new ItemStack(BlocksInit.CARVED_WHITE_PUMPKIN_BLOCK.get()));
 
     public static void init() {
         System.out.println(McsaExpectPlatform.getConfigDirectory().toAbsolutePath().normalize().toString());

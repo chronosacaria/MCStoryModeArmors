@@ -3,6 +3,7 @@ package timefall.mcsa.collections;
 import com.google.common.collect.ImmutableList;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.entity.EquipmentSlot;
+import timefall.mcsa.configs.McsaConfig;
 import timefall.mcsa.factories.ArmorItemFactory;
 import timefall.mcsa.init.ArmorsInit;
 import timefall.mcsa.items.armor.ArmorSetItem;
@@ -13,7 +14,7 @@ import java.util.List;
 
 public class ArmorCollectionHelmetOnly <T extends ArmorSetItem> {
 
-    private RegistrySupplier<T> helmet;
+    private final RegistrySupplier<T> helmet;
 
     public ArmorCollectionHelmetOnly(RegistrySupplier<T> helmet) {
         this.helmet = helmet;
@@ -24,9 +25,12 @@ public class ArmorCollectionHelmetOnly <T extends ArmorSetItem> {
     }
 
     public static <T extends ArmorSetItem> ArmorCollectionHelmetOnly<T> registerArmorCollectionHelmetOnly(ArmorSets sets, ArmorItemFactory<T> factory) {
-        return new ArmorCollectionHelmetOnly<>(
-                ArmorsInit.ARMOR.register(sets.getSetName() + "_helmet", () -> factory.create(sets, EquipmentSlot.HEAD))
-        );
+        if (McsaConfig.config.ENABLE_ARMOR_SET.get(sets)) {
+            return new ArmorCollectionHelmetOnly<>(
+                    ArmorsInit.ARMOR.register(sets.getSetName() + "_helmet", () -> factory.create(sets, EquipmentSlot.HEAD))
+            );
+        }
+        return null;
     }
 
     public T getHelmet() {

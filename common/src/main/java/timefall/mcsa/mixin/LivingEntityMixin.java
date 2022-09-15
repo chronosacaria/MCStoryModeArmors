@@ -19,7 +19,6 @@ import org.spongepowered.asm.mixin.injection.ModifyVariable;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import timefall.mcsa.api.CleanlinessHelper;
 import timefall.mcsa.configs.McsaConfig;
-import timefall.mcsa.enums.ArmorEffectID;
 import timefall.mcsa.init.ArmorsInit;
 import timefall.mcsa.items.armor.ArmorSets;
 
@@ -30,7 +29,7 @@ public class LivingEntityMixin {
     public void mcsa$damageReceivedInjections(DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir) {
 
         if ((Object) this instanceof LivingEntity livingEntity) {
-            if (McsaConfig.config.enableArmorEffect.get(ArmorEffectID.DRAGONSLAYER)) {
+            if (McsaConfig.config.enableArmorEffectOfSet.get(ArmorSets.DRAGONSBANE)) {
                 if (CleanlinessHelper.hasArmorSet(livingEntity, ArmorsInit.DRAGONSBANE, ArmorSets.DRAGONSBANE)) {
                     if (source.getSource() instanceof AreaEffectCloudEntity areaEffectCloudEntity && areaEffectCloudEntity.getOwner() instanceof EnderDragonEntity) {
                         cir.setReturnValue(false);
@@ -38,7 +37,7 @@ public class LivingEntityMixin {
                 }
             }
 
-            if (McsaConfig.config.enableArmorEffect.get(ArmorEffectID.INFINITE_DEFENSE)) {
+            if (McsaConfig.config.enableArmorEffectOfSet.get(ArmorSets.SHIELD_OF_INFINITY)) {
                 if (CleanlinessHelper.hasArmorSet(livingEntity, ArmorsInit.SHIELD_OF_INFINITY, ArmorSets.SHIELD_OF_INFINITY)) {
                     if (livingEntity.getAttacker() != null
                             && (livingEntity.getAttacker().getMainHandStack().getItem() instanceof ToolItem
@@ -48,7 +47,7 @@ public class LivingEntityMixin {
                 }
             }
 
-            if (McsaConfig.config.enableArmorEffect.get(ArmorEffectID.UNIVERSAL_PROTECTION)) {
+            if (McsaConfig.config.enableArmorEffectOfSet.get(ArmorSets.STAR_SHIELD)) {
                 if (CleanlinessHelper.hasArmorSet(livingEntity, ArmorsInit.STAR_SHIELD, ArmorSets.STAR_SHIELD)) {
                     if (livingEntity.getAttacker() != null
                             && (!(livingEntity.getAttacker().getMainHandStack().isOf(Items.NETHERITE_AXE)
@@ -68,7 +67,7 @@ public class LivingEntityMixin {
 
         LivingEntity damagedEntity = (LivingEntity) (Object) this;
 
-        if (McsaConfig.config.enableArmorEffect.get(ArmorEffectID.ADAMANTINE_GUARD)) {
+        if (McsaConfig.config.enableArmorEffectOfSet.get(ArmorSets.ADAMANTIUM)) {
             if (CleanlinessHelper.hasArmorSet(damagedEntity, ArmorsInit.ADAMANTIUM_ARMOR, ArmorSets.ADAMANTIUM)) {
                 if (!source.isOutOfWorld()) {
                     return amount * 0.10f;
@@ -76,21 +75,21 @@ public class LivingEntityMixin {
             }
         }
 
-        if (McsaConfig.config.enableArmorEffect.get(ArmorEffectID.DRAGONSLAYER)) {
+        if (McsaConfig.config.enableArmorEffectOfSet.get(ArmorSets.DRAGONSBANE)) {
             if (CleanlinessHelper.hasArmorSet(attacker, ArmorsInit.DRAGONSBANE, ArmorSets.DRAGONSBANE)) {
                 if (damagedEntity instanceof EnderDragonEntity)
                     return amount * 1.25f;
             }
         }
 
-        if (McsaConfig.config.enableArmorEffect.get(ArmorEffectID.LIBERATOR_OF_THE_END)) {
+        if (McsaConfig.config.enableArmorEffectOfSet.get(ArmorSets.ENDER_DEFENDER)) {
             if (CleanlinessHelper.hasArmorSet(attacker, ArmorsInit.ENDER_DEFENDER, ArmorSets.ENDER_DEFENDER)) {
                 if (damagedEntity instanceof EndermanEntity)
                     return amount * 1.5f;
             }
         }
 
-        if (McsaConfig.config.enableArmorEffect.get(ArmorEffectID.PRAISE_THE_SUN)) {
+        if (McsaConfig.config.enableArmorEffectOfSet.get(ArmorSets.GOLDEN_GOLIATH)) {
             if (CleanlinessHelper.hasArmorSet(attacker, ArmorsInit.GOLDEN_GOLIATH_ARMOR, ArmorSets.GOLDEN_GOLIATH)) {
                 // If it is day or the moon is full
                 if (attacker.getWorld().isDay() || attacker.getWorld().getMoonPhase() == 1
@@ -104,14 +103,14 @@ public class LivingEntityMixin {
             }
         }
 
-        if (McsaConfig.config.enableArmorEffect.get(ArmorEffectID.BLASTING_CREW)) {
+        if (McsaConfig.config.enableArmorEffectOfSet.get(ArmorSets.MAGNUS)) {
             if (CleanlinessHelper.hasArmorSet(damagedEntity, ArmorsInit.MAGNUS_ARMOR, ArmorSets.MAGNUS)) {
                 if (source.isExplosive())
                     return amount / 2;
             }
         }
 
-        if (McsaConfig.config.enableArmorEffect.get(ArmorEffectID.REDSTONE_ENGINEERING)) {
+        if (McsaConfig.config.enableArmorEffectOfSet.get(ArmorSets.REDSTONE_RIOT)) {
             if (CleanlinessHelper.hasArmorSet(damagedEntity, ArmorsInit.REDSTONE_RIOT, ArmorSets.REDSTONE_RIOT)) {
                 if (attacker.getAttacker() != null
                         && (attacker.getAttacker().getMainHandStack().getItem() instanceof ToolItem
@@ -120,7 +119,7 @@ public class LivingEntityMixin {
             }
         }
 
-        if (McsaConfig.config.enableArmorEffect.get(ArmorEffectID.BLADE_SHATTER)) {
+        if (McsaConfig.config.enableArmorEffectOfSet.get(ArmorSets.SWORDBREAKER)) {
             if (CleanlinessHelper.hasArmorSet(damagedEntity, ArmorsInit.SWORDBREAKER, ArmorSets.SWORDBREAKER)) {
                 if (attacker.getMainHandStack() != null && attacker.getMainHandStack().getItem() instanceof SwordItem) {
                     attacker.getMainHandStack().damage(50, attacker,

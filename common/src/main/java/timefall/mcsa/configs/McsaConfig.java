@@ -8,7 +8,6 @@ import me.shedaniel.autoconfig.serializer.JanksonConfigSerializer;
 import me.shedaniel.cloth.clothconfig.shadowed.blue.endless.jankson.Comment;
 import net.minecraft.entity.EquipmentSlot;
 import timefall.mcsa.Mcsa;
-import timefall.mcsa.enums.ArmorEffectID;
 import timefall.mcsa.items.armor.ArmorSets;
 
 import java.util.EnumMap;
@@ -69,7 +68,11 @@ public class McsaConfig implements ConfigData {
             "Praise the Sun, Golden Goliath: When it is day or a full moon, and you can see the sky, you deal double damage and set enemies on fire. Otherwise, you deal half damage\n" +
             "Redstone Engineering, Redstone Riot: Reduce all damage to 25% of incoming damage\n" +
             "Universal Protection, Star Shield: You can only be damaged by Netherite Weapons")
-    public EnumMap<ArmorEffectID, Boolean> enableArmorEffect = new EnumMap<>(ArmorEffectID.class);
+    public EnumMap<ArmorSets, Boolean> enableArmorEffectOfSet = new EnumMap<>(ArmorSets.class);
+
+    public EnumMap<ArmorSets, Boolean> enableArmorEffectTooltip = new EnumMap<>(ArmorSets.class);
+
+    public final EnumMap<ArmorSets, Boolean> ENABLE_ARMOR_SET = new EnumMap<>(ArmorSets.class);
 
     public EnumMap<ArmorSets, ArmorStats> armorStats = new EnumMap<>(ArmorSets.class);
 
@@ -80,10 +83,12 @@ public class McsaConfig implements ConfigData {
 
     // set config defaults
     public McsaConfig() {
-        for (ArmorEffectID armorEffectID : ArmorEffectID.values())
-            enableArmorEffect.put(armorEffectID, true);
-
         for (ArmorSets armorSet : ArmorSets.values()) {
+            enableArmorEffectOfSet.put(armorSet,true);
+            enableArmorEffectTooltip.put(armorSet, true);
+            if (!enableArmorEffectOfSet.get(armorSet))
+                enableArmorEffectTooltip.replace(armorSet, false);
+            ENABLE_ARMOR_SET.put(armorSet, true);
             ArmorStats stats = new ArmorStats();
             stats.protection = new EnumMap<>(EquipmentSlot.class);
             for (EquipmentSlot slot : EnumSet.of(EquipmentSlot.HEAD, EquipmentSlot.CHEST, EquipmentSlot.LEGS, EquipmentSlot.FEET)) {

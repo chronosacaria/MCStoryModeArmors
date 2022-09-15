@@ -153,20 +153,22 @@ public class ArmorSetItem extends ArmorItem {
         if (McsaConfig.config.enableArmorSetBonusTooltips) {
             translationKey = String.format("item.mcsa.%s.effect.tooltip_", setId);
             i = 1;
-
-            while (I18n.hasTranslation(translationKey + i)) {
-                tooltip.add(Text.translatable(translationKey + i).formatted(
-                        switch (set) {
-                            case GOLDEN_GOLIATH -> Formatting.GOLD;
-                            case REDSTONE_RIOT -> Formatting.RED;
-                            case ENDER_DEFENDER -> Formatting.AQUA;
-                            case SWORDBREAKER, STAR_SHIELD -> Formatting.BLUE;
-                            case SHIELD_OF_INFINITY -> Formatting.LIGHT_PURPLE;
-                            case DRAGONSBANE -> Formatting.DARK_PURPLE;
-                            case ADAMANTIUM -> Formatting.YELLOW;
-                            default -> Formatting.GRAY;
-                        }));
-                i++;
+            if (McsaConfig.config.enableArmorEffectTooltip.get(set)
+                    && McsaConfig.config.enableArmorEffectOfSet.get(set)) {
+                while (I18n.hasTranslation(translationKey + i)) {
+                    tooltip.add(Text.translatable(translationKey + i).formatted(
+                            switch (set) {
+                                case GOLDEN_GOLIATH -> Formatting.GOLD;
+                                case REDSTONE_RIOT -> Formatting.RED;
+                                case ENDER_DEFENDER -> Formatting.AQUA;
+                                case SWORDBREAKER, STAR_SHIELD -> Formatting.BLUE;
+                                case SHIELD_OF_INFINITY -> Formatting.LIGHT_PURPLE;
+                                case DRAGONSBANE -> Formatting.DARK_PURPLE;
+                                case ADAMANTIUM -> Formatting.YELLOW;
+                                default -> Formatting.GRAY;
+                            }));
+                    i++;
+                }
             }
         }
     }
