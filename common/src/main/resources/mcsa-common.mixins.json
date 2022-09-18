@@ -7,7 +7,7 @@
   ],
   "mixins": [
     "EndermanEntityMixin",
-    "LivingEntityMixin"
+    "LivingEntityPlayerEntityMixin"
   ],
   "injectors": {
     "defaultRequire": 1

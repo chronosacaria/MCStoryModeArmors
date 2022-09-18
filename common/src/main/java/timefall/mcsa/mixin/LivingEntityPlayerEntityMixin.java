@@ -23,7 +23,7 @@ import timefall.mcsa.init.ArmorsInit;
 import timefall.mcsa.items.armor.ArmorSets;
 
 @Mixin({LivingEntity.class, PlayerEntity.class})
-public class LivingEntityMixin {
+public class LivingEntityPlayerEntityMixin {
 
     @Inject(method = "damage", at = @At("HEAD"), cancellable = true)
     public void mcsa$damageReceivedInjections(DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir) {
