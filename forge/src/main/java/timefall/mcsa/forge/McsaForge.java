@@ -14,6 +14,5 @@ public class McsaForge {
         EventBuses.registerModEventBus(Mcsa.MOD_ID, eventBus);
 
         Mcsa.init();
-        //ItemsInit.register(eventBus);
     }
 }
