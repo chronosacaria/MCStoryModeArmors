@@ -1,4 +1,4 @@
-package timefall.mcsa.fabric.mixins;
+package timefall.mcsa.mixin;
 
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;

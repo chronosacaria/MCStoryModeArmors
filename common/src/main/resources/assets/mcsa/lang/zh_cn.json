@@ -7,6 +7,11 @@
   "item.mcsa.adamantium_impervium_leggings"         : "亚德曼合抗渗金护腿",
   "item.mcsa.adamantium_impervium_boots"            : "亚德曼合抗渗金靴子",
 
+  "item.mcsa.adamantium_impervium.effect.tooltip_1" : "护甲套装效果: 亚德曼合抗渗金保护",
+
+  "item.mcsa.adamantium_impervium.tooltip_1"        : "亚德曼合抗渗金！",
+  "item.mcsa.adamantium_impervium.tooltip_2"        : "比发音更难损坏！",
+
   "item.mcsa.champion_petra_helmet"                 : "冠军佩特拉头盔",
   "item.mcsa.champion_petra_chestplate"             : "冠军佩特拉胸甲",
   "item.mcsa.champion_petra_leggings"               : "冠军佩特拉护腿",
@@ -16,6 +21,8 @@
   "item.mcsa.dragonsbane_chestplate"                : "龙诛戮胸甲",
   "item.mcsa.dragonsbane_leggings"                  : "龙诛戮护腿",
   "item.mcsa.dragonsbane_boots"                     : "龙诛戮靴子",
+
+  "item.mcsa.dragonsbane.effect.tooltip_1"          : "护甲套装效果: 屠龙者",
 
   "item.mcsa.ellegaard_helmet"                      : "艾勒卡德的头盔",
   "item.mcsa.ellegaard_chestplate"                  : "艾勒卡德的胸甲",
@@ -27,6 +34,11 @@
   "item.mcsa.ender_defender_leggings"               : "末影守卫者护腿",
   "item.mcsa.ender_defender_boots"                  : "末影守卫者靴子",
 
+  "item.mcsa.ender_defender.effect.tooltip_1"       : "护甲套装效果: 末地解放者",
+
+  "item.mcsa.ender_defender.tooltip_1"              : "末影守卫者! ",
+  "item.mcsa.ender_defender.tooltip_2"              : "非常抗拒末影人的攻击。",
+
   "item.mcsa.enderman_soren_helmet"                 : "索伦的末影人服装头盔",
   "item.mcsa.enderman_soren_chestplate"             : "索伦的末影人服装胸甲",
   "item.mcsa.enderman_soren_leggings"               : "索伦的末影人服装护腿",
@@ -37,15 +49,22 @@
   "item.mcsa.gabriel_leggings"                      : "加布里埃尔的护腿",
   "item.mcsa.gabriel_boots"                         : "加布里埃尔的靴子",
 
-  "item.mcsa.golden_goliath_helmet"                 : "金巨人头盔头盔",
-  "item.mcsa.golden_goliath_chestplate"             : "金巨人头盔胸甲",
-  "item.mcsa.golden_goliath_leggings"               : "金巨人头盔护腿",
-  "item.mcsa.golden_goliath_boots"                  : "金巨人头盔靴子",
+  "item.mcsa.golden_goliath_helmet"                 : "金巨人头盔",
+  "item.mcsa.golden_goliath_chestplate"             : "金巨人胸甲",
+  "item.mcsa.golden_goliath_leggings"               : "金巨人护腿",
+  "item.mcsa.golden_goliath_boots"                  : "金巨人靴子",
+
+  "item.mcsa.golden_goliath.effect.tooltip_1"       : "护甲套装效果: 赞美太阳",
+
+  "item.mcsa.golden_goliath.tooltip_1"              : "金巨人! ",
+  "item.mcsa.golden_goliath.tooltip_2"              : "像太阳本身一样明亮和强大! ",
 
   "item.mcsa.golden_goliath_circuitry_helmet"       : "金巨人电路头盔头盔",
   "item.mcsa.golden_goliath_circuitry_chestplate"   : "金巨人电路头盔胸甲",
   "item.mcsa.golden_goliath_circuitry_leggings"     : "金巨人电路头盔护腿",
   "item.mcsa.golden_goliath_circuitry_boots"        : "金巨人电路头盔靴子",
+
+  "item.mcsa.golden_goliath_circuitry.tooltip_1"    : "它是昔日荣耀的外壳。",
 
   "item.mcsa.harpers_headset_helmet"                : "哈珀的耳机",
 
@@ -89,10 +108,20 @@
   "item.mcsa.redstone_riot_leggings"                : "红石暴动护腿",
   "item.mcsa.redstone_riot_boots"                   : "红石暴动靴子",
 
+  "item.mcsa.redstone_riot.effect.tooltip_1"        : "护甲套装效果: 红石工程",
+
+  "item.mcsa.redstone_riot.tooltip_1"               : "红石暴动！",
+  "item.mcsa.redstone_riot.tooltip_2"               : "它被设计成几乎坚不可摧！",
+
   "item.mcsa.shield_of_infinity_helmet"             : "无限之盾头盔",
   "item.mcsa.shield_of_infinity_chestplate"         : "无限之盾胸甲",
   "item.mcsa.shield_of_infinity_leggings"           : "无限之盾护腿",
   "item.mcsa.shield_of_infinity_boots"              : "无限之盾靴子",
+
+  "item.mcsa.shield_of_infinity.effect.tooltip_1"   : "护甲套装效果: 坚定不移的防守",
+
+  "item.mcsa.shield_of_infinity.tooltip_1"          : "无限之盾！",
+  "item.mcsa.shield_of_infinity.tooltip_2"          : "之所以这样称呼是因为它无限棒！",
 
   "item.mcsa.soren_helmet"                          : "索伦的帽子",
   "item.mcsa.soren_chestplate"                      : "索伦的胸甲",
@@ -104,10 +133,21 @@
   "item.mcsa.star_shield_leggings"                  : "星盾护腿",
   "item.mcsa.star_shield_boots"                     : "星盾靴子",
 
+  "item.mcsa.star_shield.effect.tooltip_1"          : "护甲套装效果: 普遍保护",
+
+  "item.mcsa.star_shield.tooltip_1"                 : "星盾！",
+  "item.mcsa.star_shield.tooltip_2"                 : "宇宙中没有任何物体可以穿透它！",
+
   "item.mcsa.swordbreaker_helmet"                   : "破剑者头盔",
   "item.mcsa.swordbreaker_chestplate"               : "破剑者胸甲",
   "item.mcsa.swordbreaker_leggings"                 : "破剑者护腿",
   "item.mcsa.swordbreaker_boots"                    : "破剑者靴子",
+
+  "item.mcsa.sword_breaker.effect.tooltip_1"        : "护甲套装效果: 刀片破碎",
+
+  "item.mcsa.swordbreaker.tooltip_1"                : "破剑者！",
+  "item.mcsa.swordbreaker.tooltip_2"                : "除了最强大的武器之外",
+  "item.mcsa.swordbreaker.tooltip_3"                : "任何东西都会在它面前粉碎。",
 
   "item.mcsa.tim_helmet"                            : "蒂姆的帽子",
   "item.mcsa.tim_chestplate"                        : "蒂姆的胸甲",
@@ -115,5 +155,7 @@
   "item.mcsa.tim_boots"                             : "蒂姆的靴子",
 
   "block.mcsa.white_pumpkin"                        : "白南瓜",
-  "block.mcsa.carved_white_pumpkin"                 : "雕刻过的白南瓜"
+  "block.mcsa.carved_white_pumpkin"                 : "雕刻过的白南瓜",
+
+  "item.mcsa.gap.tooltip_"                          : " "
 }
