@@ -12,7 +12,7 @@
     "sources": "https://github.com/chronosacaria/MCStoryModeArmors",
     "issues": "https://github.com/chronosacaria/MCStoryModeArmors/issues"
   },
-  "license": "Timefall Development License",
+  "license": "Timefall Development License 1.1",
   "icon": "assets/mcsa/icon.png",
   "environment": "*",
   "entrypoints": {

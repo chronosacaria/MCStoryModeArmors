@@ -1,7 +1,7 @@
 modLoader = "javafml"
 loaderVersion = "[41,)"
 issueTrackerURL = "https://github.com/chronosacaria/MCStoryModeArmors/issues"
-license = "Timefall Development License"
+license = "Timefall Development License 1.1"
 
 [[mods]]
 modId = "mcsa"
