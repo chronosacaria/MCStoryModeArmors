@@ -5,7 +5,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import timefall.mcsa.Mcsa;
-import timefall.mcsa.forge.init.ItemsInit;
+import timefall.mcsa.forge.inits.ItemsInit;
 
 @Mod(Mcsa.MOD_ID)
 public class McsaForge {

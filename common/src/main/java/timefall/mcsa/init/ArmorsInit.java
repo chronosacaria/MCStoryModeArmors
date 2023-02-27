@@ -3,7 +3,7 @@ package timefall.mcsa.init;
 import dev.architectury.registry.registries.DeferredRegister;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.Item;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.registry.RegistryKeys;
 import timefall.mcsa.Mcsa;
 import timefall.mcsa.collections.ArmorCollection;
 import timefall.mcsa.collections.ArmorCollectionHelmetOnly;
@@ -13,7 +13,7 @@ import timefall.mcsa.items.armor.ArmorSets;
 import java.util.EnumSet;
 
 public class ArmorsInit {
-    public static final DeferredRegister<Item> ARMOR = DeferredRegister.create(Mcsa.MOD_ID, Registry.ITEM_KEY);
+    public static final DeferredRegister<Item> ARMOR = DeferredRegister.create(Mcsa.MOD_ID, RegistryKeys.ITEM);
 
     public static final ArmorCollection<ArmorSetItem> ADAMANTIUM_ARMOR =
             ArmorCollection.registerArmorCollection(ArmorSets.ADAMANTIUM, EnumSet.allOf(EquipmentSlot.class));

@@ -47,8 +47,9 @@ public class ArmorSetItem extends ArmorItem {
     protected final Multimap<EntityAttribute, EntityAttributeModifier> attributeModifiers;
     protected final ArmorSets set;
 
+    @SuppressWarnings("UnstableApiUsage")
     public ArmorSetItem(ArmorSets set, EquipmentSlot slot) {
-        super(set, slot, new Settings().group(Mcsa.EXAMPLE_TAB));
+        super(set, slot, new Settings().arch$tab(Mcsa.MCSA_TAB));
         this.set = set;
 
         int protection = set.getProtectionAmount(slot);

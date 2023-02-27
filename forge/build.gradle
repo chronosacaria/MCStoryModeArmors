@@ -8,6 +8,15 @@ architectury {
     forge()
 }
 
+repositories {
+    maven {
+        url "https://cursemaven.com"
+        content {
+            includeGroup "curse.maven"
+        }
+    }
+}
+
 loom {
     accessWidenerPath = project(":common").loom.accessWidenerPath
 
