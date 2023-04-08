@@ -1,7 +1,5 @@
 package timefall.mcsa.items.armor;
 
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.Items;
@@ -233,7 +231,6 @@ public enum ArmorSets implements ArmorMaterial {
         return this.repairIngredient.get();
     }
 
-    @Environment(EnvType.CLIENT)
     @Override
     public String getName(){
         return this.textureName;
