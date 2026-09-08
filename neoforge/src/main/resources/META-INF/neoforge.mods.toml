@@ -1,14 +1,15 @@
 modLoader = "javafml" #mandatory
 loaderVersion = "${neoforge_loader_version_range}" #mandatory
+issueTrackerURL = "https://github.com/Timefall-Development/MCStoryModeArmors/issues"
 license = "${license}" # Review your options at https://choosealicense.com/.
 #issueTrackerURL="https://change.me.to.your.issue.tracker.example.invalid/" #optional
 [[mods]] #mandatory
-modId = "mcsa" #mandatory
+modId = "${archives_base_name}" #mandatory
 version = "${version}" #mandatory
 displayName = "${mod_name}" #mandatory
 #updateJSONURL="https://change.me.example.invalid/updates.json" #optional (see https://docs.neoforged.net/docs/misc/updatechecker/)
 #displayURL="https://change.me.to.your.mods.homepage.example.invalid/" #optional (displayed in the mod UI)
-logoFile="mcsa.png" #optional
+logoFile="assets/mcsa/icon.png" #optional
 credits="${credits}" #optional
 authors = "${mod_author}" #optional
 description = '''${description}''' #mandatory (Supports multiline text)
@@ -16,13 +17,13 @@ description = '''${description}''' #mandatory (Supports multiline text)
 config = "mcsa.mixins.json"
 [[mixins]]
 config = "mcsa.neoforge.mixins.json"
-[[dependencies.mcsa]] #optional
+[[dependencies.${archives_base_name}]] #optional
 modId = "neoforge" #mandatory
 type="required" #mandatory (Can be one of "required", "optional", "incompatible" or "discouraged")
 versionRange = "[${neoforge_version},)" #mandatory
 ordering = "NONE" # The order that this dependency should load in relation to your mod, required to be either 'BEFORE' or 'AFTER' if the dependency is not mandatory
 side = "BOTH" # Side this dependency is applied on - 'BOTH', 'CLIENT' or 'SERVER'
-[[dependencies.mcsa]]
+[[dependencies.${archives_base_name}]]
 modId = "minecraft"
 type="required" #mandatory (Can be one of "required", "optional", "incompatible" or "discouraged")
 versionRange = "${minecraft_version_range}"

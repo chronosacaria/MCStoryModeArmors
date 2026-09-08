@@ -1,6 +1,6 @@
 package dev.timefall.mcsa.platform;
 
-import dev.timefall.mcsa.Constants;
+import dev.timefall.mcsa.ModConstants;
 import dev.timefall.mcsa.platform.services.IPlatformHelper;
 
 import java.util.ServiceLoader;
@@ -24,7 +24,7 @@ public class Services {
         final T loadedService = ServiceLoader.load(clazz)
                 .findFirst()
                 .orElseThrow(() -> new NullPointerException("Failed to load service for " + clazz.getName()));
-        Constants.LOG.debug("Loaded {} for service {}", loadedService, clazz);
+        ModConstants.LOGGER.debug("Loaded {} for service {}", loadedService, clazz);
         return loadedService;
     }
 }
