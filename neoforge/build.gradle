@@ -58,10 +58,39 @@ publishMods {
 }
 
 processResources {
-    inputs.property "version", project.version
+    def resourceTargets = [:]
+    project.properties.each { key, value ->
+        if (value instanceof String) {
+            resourceTargets.put(key, value)
+        }
+    }
+
+    resourceTargets.put("custom_meta", [
+            // Minecraft Information
+            "minecraft_version": project.minecraft_version,
+            //"minecraft_version_range": project.minecraft_version_range,
+            "enabled_platforms": project.enabled_platforms,
+
+            // Mod Information
+            "license": project.license,
+            "modId": project.archives_base_name,
+            "version": project.mod_version,
+            "mod_name": project.mod_name,
+            "credits": project.credits,
+            "authors": project.mod_author,
+            "description": project.description,
+            "maven_group": project.maven_group,
+
+            // Loader Information
+            "neoforge_version": project.neoforge_version,
+            "neoforge_loader_version_range": project.neoforge_loader_version_range,
+
+            // Mappings Information
+            "yarn_mappings": project.yarn_mappings
+    ])
 
     filesMatching("META-INF/neoforge.mods.toml") {
-        expand "version": project.version
+        expand(resourceTargets)
     }
 }
 

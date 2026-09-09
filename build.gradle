@@ -24,6 +24,10 @@ subprojects {
         }
     }
 
+    tasks.withType(JavaExec).configureEach {
+        systemProperty("MC_ENV", "dev")
+    }
+
     //if (project.name != "common") {
     //    publishMods {
     //        file = remapJar.archiveFile
@@ -52,6 +56,7 @@ allprojects {
     apply plugin: "maven-publish"
 
     version = "${rootProject.mod_version}+mc${rootProject.minecraft_version}"
+    archives_base_name = rootProject.archives_base_name
     group = rootProject.maven_group
 
     repositories {

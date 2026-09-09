@@ -2,8 +2,7 @@ package dev.timefall.mcsa.client;
 
 import net.fabricmc.api.ClientModInitializer;
 
-public class McsaClient implements ClientModInitializer {
-
+public class McsaClientFabric implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
 

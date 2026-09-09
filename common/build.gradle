@@ -1,83 +1,23 @@
-plugins {
-    id "com.github.johnrengelman.shadow" version "7.1.2"
-}
-
 architectury {
-    platformSetupLoomIde()
-    fabric()
+    common(rootProject.enabled_platforms.split(","))
 }
 
-configurations {
-    common
-    shadowCommon // Don't use shadow from the shadow plugin since it *excludes* files.
-    compileClasspath.extendsFrom common
-    runtimeClasspath.extendsFrom common
-    developmentFabric.extendsFrom common
-}
 
 dependencies {
+    // We depend on fabric loader here to use the fabric @Environment annotations and get the mixin dependencies
+    // Do NOT use other classes from fabric loader
     modImplementation "net.fabricmc:fabric-loader:${rootProject.fabric_loader_version}"
-    modApi "net.fabricmc.fabric-api:fabric-api:${rootProject.fabric_api_version}"
 
-    //modImplementation "dev.emi:emi-fabric:${rootProject.emi_version}+${rootProject.minecraft_version}"
+    //modCompileOnly "dev.emi:emi-xplat-intermediary:${rootProject.emi_version}+${rootProject.minecraft_version}"
+    modCompileOnly "me.fzzyhmstrs:fzzy_config:${rootProject.fzzy_config_version}"
 
-    common(project(path: ":common", configuration: "namedElements")) { transitive false }
-    shadowCommon(project(path: ":common", configuration: "transformProductionFabric")) { transitive false }
-    modImplementation "me.fzzyhmstrs:fzzy_config:${rootProject.fzzy_config_version}"
-    //modCompileOnly "maven.modrinth:mcdx:${rootProject.mcdx_version}"
-    //modImplementation "net.fabricmc:fabric-language-kotlin:1.12.1+kotlin.2.0.20"
-    //modImplementation "net.peanuuutz.tomlkt:tomlkt:0.3.7"
-}
-
-publishMods {
-    displayName = "[Fabric/Quilt ${rootProject.minecraft_version}] ${rootProject.mod_version}"
-    version = "fabric-${project.version}"
-    modLoaders.add("fabric")
-    modLoaders.add("quilt")
-}
-
-processResources {
-    inputs.property "version", project.version
-
-    filesMatching("fabric.mod.json") {
-        expand "version": project.version
-    }
-}
-
-shadowJar {
-    exclude "architectury.common.json"
-
-    configurations = [project.configurations.shadowCommon]
-    archiveClassifier = "dev-shadow"
-}
-
-remapJar {
-    injectAccessWidener = true
-    input.set shadowJar.archiveFile
-    dependsOn shadowJar
-    archiveClassifier = null
-}
-
-jar {
-    archiveClassifier = "dev"
-}
-
-sourcesJar {
-    def commonSources = project(":common").sourcesJar
-    dependsOn commonSources
-    from commonSources.archiveFile.map { zipTree(it) }
-}
-
-components.java {
-    withVariantsFromConfiguration(project.configurations.shadowRuntimeElements) {
-        skip()
-    }
+    //modCompileOnly "maven.modrinth:mcdx:${rootProject.mcdxVersion}"
 }
 
 publishing {
     publications {
-        mavenFabric(MavenPublication) {
-            artifactId = rootProject.archives_base_name + "-" + project.name
+        mavenCommon(MavenPublication) {
+            artifactId = rootProject.archives_base_name
             from components.java
         }
     }
@@ -86,8 +26,4 @@ publishing {
     repositories {
         // Add repositories to publish to here.
     }
-}
-
-fabricApi {
-    configureDataGeneration()
 }

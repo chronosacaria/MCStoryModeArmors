@@ -1,15 +1,16 @@
 {
     "schemaVersion": 1,
     "id": "${archives_base_name}",
-    "version": "${version}",
-    "name": "${mod_name}",
+    "version": "${mod_version}",
+    "name": "${name}",
     "description": "${description}",
     "authors": [
         "${mod_author}"
     ],
     "contact": {
-        "homepage": "https://fabricmc.net/",
-        "sources": "https://github.com/FabricMC/fabric-example-mod"
+        "homepage": "https://www.curseforge.com/minecraft/mc-mods/mcsa",
+        "sources": "https://github.com/TimefallDevelopment/MCStoryModeArmors",
+        "issues": "https://github.com/TimefallDevelopment/MCStoryModeArmors/issues"
     },
     "license": "${license}",
     "icon": "assets/mcsa/icon.png",
@@ -19,7 +20,7 @@
             "dev.timefall.mcsa.data.McsaDataGenerator"
         ],
         "client": [
-            "dev.timefall.mcsa.client.McsaClient"
+            "dev.timefall.mcsa.client.McsaClientFabric"
         ],
         "main": [
             "dev.timefall.mcsa.McsaFabric"
@@ -33,7 +34,6 @@
         "fabricloader": ">=${fabric_loader_version}",
         "fabric-api": "*",
         "minecraft": "${minecraft_version}",
-        "java": ">=${java_version}",
         "fzzy_config": ">=${fzzy_config_version}"
     },
     "suggests": {

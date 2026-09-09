@@ -1,0 +1,13 @@
+{
+  "itemGroup.mcsa.story_mode_armor":           "MC Story Mode Armor",
+
+  "item.mcsa.adamantium_impervium_helmet":     "Adamantium Impervium Helmet",
+  "item.mcsa.adamantium_impervium_chestplate": "Adamantium Impervium Chestplate",
+  "item.mcsa.adamantium_impervium_leggings":   "Adamantium Impervium Leggings",
+  "item.mcsa.adamantium_impervium_boots":      "Adamantium Impervium Boots",
+
+  "item.mcsa.champion_petra_helmet":           "Champion Petra's Helmet",
+  "item.mcsa.champion_petra_chestplate":       "Champion Petra's Chestplate",
+  "item.mcsa.champion_petra_leggings":         "Champion Petra's Leggings",
+  "item.mcsa.champion_petra_boots":            "Champion Petra's Boots"
+}

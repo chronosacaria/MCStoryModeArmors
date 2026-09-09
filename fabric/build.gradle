@@ -37,10 +37,36 @@ publishMods {
 }
 
 processResources {
-    inputs.property "version", project.version
+    def resourceTargets = [:]
+    project.properties.each { key, value ->
+        if (value instanceof String) {
+            resourceTargets.put(key, value)
+        }
+    }
+
+    resourceTargets.put("custom_meta", [
+            // Minecraft Information
+            "minecraft_version": project.minecraft_version,
+            "enabled_platforms": project.enabled_platforms,
+
+            // Mod Information
+            "archivesBaseName": project.archives_base_name,
+            "mod_version": project.mod_version,
+            "maven_group": project.maven_group,
+            "description": project.description,
+            "mod_author": project.mod_author,
+            "license": project.license,
+
+            // Loader Information
+            "fabric_api_version": project.fabric_api_version,
+            "fabric_loader_version": project.fabric_loader_version,
+
+            // Mappings Information
+            "yarn_mappings": project.yarn_mappings
+    ])
 
     filesMatching("fabric.mod.json") {
-        expand "version": project.version
+        expand(resourceTargets)
     }
 }
 
