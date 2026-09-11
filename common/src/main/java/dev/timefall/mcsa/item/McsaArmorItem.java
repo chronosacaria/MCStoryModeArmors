@@ -30,7 +30,7 @@ public class McsaArmorItem extends ArmorItem {
 
     public static final Map<RegistryEntry<ArmorMaterial>, List<StatusEffectInstance>> ARMOR_MATERIAL_TO_STATUS_EFFECT_MAP =
             (new ImmutableMap.Builder<RegistryEntry<ArmorMaterial>, List<StatusEffectInstance>>())
-            .put(ArmorMaterialsRegistry.ADAMANTIUM_IMPERVIUM,
+            .put(ArmorMaterialsRegistry.LAB,
                     List.of(new StatusEffectInstance(StatusEffects.HASTE, 400, 2, false, false))
             ).build();
 

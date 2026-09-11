@@ -21,18 +21,14 @@ import java.util.List;
 public class ArmorMaterialsRegistry {
     private static final Registrar<ArmorMaterial> ARMOR_MATERIAL = ConfigApiJava.platform().createRegistrar(ModConstants.MOD_ID, Registries.ARMOR_MATERIAL);
 
-    public static final RegistryEntry<ArmorMaterial> ADAMANTIUM_IMPERVIUM = registerArmorMaterial(
-            "adamantium_impervium",
-            4, 9, 7, 4, 25,
-            Items.DIAMOND, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND,
-            3.0f, 0.3f);
 
-    public static final RegistryEntry<ArmorMaterial> CHAMPION_PETRA = registerArmorMaterial(
-            "champion_petra",
-            4, 9, 7, 4, 25,
-            Items.DIAMOND, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND,
-            2.0f, 0.2f);
-
+    public static final RegistryEntry<ArmorMaterial> CHAMPION               = registerArmorMaterial("champion",                 3, 6, 8, 3, 21, Items.DIAMOND,                           SoundEvents.ITEM_ARMOR_EQUIP_GENERIC,  3.0F, 0.1F);
+    public static final RegistryEntry<ArmorMaterial> LAB                    = registerArmorMaterial("lab",                      4, 9, 7, 4, 25, Items.NETHERITE_INGOT,                   SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND,  3.0F, 0.3F);
+    public static final RegistryEntry<ArmorMaterial> ORDER_OF_THE_STONE     = registerArmorMaterial("order_of_the_stone",       3, 6, 8, 3, 17, Items.DIAMOND,                           SoundEvents.ITEM_ARMOR_EQUIP_GENERIC,  1.5F, 0.0F);
+    public static final RegistryEntry<ArmorMaterial> PRISMARINE             = registerArmorMaterial("prismarine",               3, 6, 5, 3, 13, Items.PRISMARINE_SHARD,                  SoundEvents.ITEM_ARMOR_EQUIP_GENERIC,  2.0F, 0.0F);
+    public static final RegistryEntry<ArmorMaterial> ENDERMAN               = registerArmorMaterial("enderman",                 1, 2, 3, 1, 10, Items.ENDER_PEARL,      RegistryEntry.of(SoundEvents.ENTITY_ENDERMAN_AMBIENT),  0.0f, 0.0f);
+    public static final RegistryEntry<ArmorMaterial> NINJA_ARMOR            = registerArmorMaterial("ninja",                    1, 2, 3, 1, 10, Items.BLACK_DYE,        RegistryEntry.of(SoundEvents.BLOCK_WOOL_HIT),           0.0f, 0.0f);
+    public static final RegistryEntry<ArmorMaterial> WHITE_PUMPKIN          = registerArmorMaterial("white_pumpkin",            1, 2, 3, 2, 15, Items.WHITE_DYE,                         SoundEvents.ITEM_ARMOR_EQUIP_GENERIC,  0.0f, 0.0f);
 
     public static RegistryEntry<ArmorMaterial> registerArmorMaterial(String id, int bootsDefence, int leggingsDefence, int chestplateDefence, int helmetDefence, int enchantability, Item repairIngredient, RegistryEntry<SoundEvent> soundEvent, float toughness, float knockbackResistance) {
         return ARMOR_MATERIAL.register(id, () -> new ArmorMaterial(Util.make(new EnumMap<>(ArmorItem.Type.class), map -> {

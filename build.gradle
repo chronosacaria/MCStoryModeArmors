@@ -24,10 +24,6 @@ subprojects {
         }
     }
 
-    tasks.withType(JavaExec).configureEach {
-        systemProperty("MC_ENV", "dev")
-    }
-
     //if (project.name != "common") {
     //    publishMods {
     //        file = remapJar.archiveFile

@@ -1,13 +1,302 @@
 {
-  "itemGroup.mcsa.story_mode_armor":           "MC Story Mode Armor",
+  "itemGroup.mcsa.story_mode_armor_challenge_armor":          "MCSA: Challenge Armor",
+  "itemGroup.mcsa.story_mode_armor_champion_armor":           "MCSA: Champion Armor",
+  "itemGroup.mcsa.story_mode_armor_faction_armor":            "MCSA: Faction Armor",
+  "itemGroup.mcsa.story_mode_armor_lab_armor":                "MCSA: Lab Armor",
+  "itemGroup.mcsa.story_mode_armor_order_of_the_stone_armor": "MCSA: Order of the Stone Armor",
 
-  "item.mcsa.adamantium_impervium_helmet":     "Adamantium Impervium Helmet",
-  "item.mcsa.adamantium_impervium_chestplate": "Adamantium Impervium Chestplate",
-  "item.mcsa.adamantium_impervium_leggings":   "Adamantium Impervium Leggings",
-  "item.mcsa.adamantium_impervium_boots":      "Adamantium Impervium Boots",
+  "item.mcsa.adamantium_impervium_helmet":                    "Adamantium Impervium Helmet",
+  "item.mcsa.adamantium_impervium_chestplate":                "Adamantium Impervium Chestplate",
+  "item.mcsa.adamantium_impervium_leggings":                  "Adamantium Impervium Leggings",
+  "item.mcsa.adamantium_impervium_boots":                     "Adamantium Impervium Boots",
 
-  "item.mcsa.champion_petra_helmet":           "Champion Petra's Helmet",
-  "item.mcsa.champion_petra_chestplate":       "Champion Petra's Chestplate",
-  "item.mcsa.champion_petra_leggings":         "Champion Petra's Leggings",
-  "item.mcsa.champion_petra_boots":            "Champion Petra's Boots"
+  "item.mcsa.admin_fred_helmet":                              "Admin Fred's Helmet",
+  "item.mcsa.admin_fred_chestplate":                          "Admin Fred's Chestplate",
+  "item.mcsa.admin_fred_leggings":                            "Admin Fred's Leggings",
+  "item.mcsa.admin_fred_boots":                               "Admin Fred's Boots",
+
+  "item.mcsa.admin_romeo_helmet":                             "Admin Romeo's Helmet",
+  "item.mcsa.admin_romeo_chestplate":                         "Admin Romeo's Chestplate",
+  "item.mcsa.admin_romeo_leggings":                           "Admin Romeo's Leggings",
+  "item.mcsa.admin_romeo_boots":                              "Admin Romeo's Boots",
+
+  "item.mcsa.admin_xara_helmet":                              "Admin Xara's Helmet",
+  "item.mcsa.admin_xara_chestplate":                          "Admin Xara's Chestplate",
+  "item.mcsa.admin_xara_leggings":                            "Admin Xara's Leggings",
+  "item.mcsa.admin_xara_boots":                               "Admin Xara's Boots",
+
+  "item.mcsa.aiden_helmet":                                   "Aiden's Hat",
+  "item.mcsa.aiden_chestplate":                               "Aiden's Jacket",
+  "item.mcsa.aiden_leggings":                                 "Aiden's Pants",
+  "item.mcsa.aiden_boots":                                    "Aiden's Boots",
+
+  "item.mcsa.armor_number_7_helmet":                          "Armor Number 7 Helmet",
+  "item.mcsa.armor_number_7_chestplate":                      "Armor Number 7 Strap Plate",
+  "item.mcsa.armor_number_7_leggings":                        "Armor Number 7 Knee Pads",
+  "item.mcsa.armor_number_7_boots":                           "Armor Number 7 Boots",
+
+  "item.mcsa.axel_helmet":                                    "Axel's Helmet",
+  "item.mcsa.axel_chestplate":                                "Axel's Jacket",
+  "item.mcsa.axel_leggings":                                  "Axel's Pants",
+  "item.mcsa.axel_boots":                                     "Axel's Sandals",
+
+  "item.mcsa.champion_jack_helmet":                           "Jack's Champion Helmet",
+  "item.mcsa.champion_jack_chestplate":                       "Jack's Champion Chestplate",
+  "item.mcsa.champion_jack_leggings":                         "Jack's Champion Leggings",
+  "item.mcsa.champion_jack_boots":                            "Jack's Champion Boots",
+
+  "item.mcsa.champion_petra_helmet":                          "Petra's Champion Helmet",
+  "item.mcsa.champion_petra_chestplate":                      "Petra's Champion Chestplate",
+  "item.mcsa.champion_petra_leggings":                        "Petra's Champion Leggings",
+  "item.mcsa.champion_petra_boots":                           "Petra's Champion Boots",
+
+  "item.mcsa.dented_danger_helmet":                           "Dented Danger Helmet",
+  "item.mcsa.dented_danger_chestplate":                       "Dented Danger Shoulder Pad",
+  "item.mcsa.dented_danger_leggings":                         "Dented Danger Knee Pads",
+  "item.mcsa.dented_danger_boots":                            "Dented Danger Boots",
+
+  "item.mcsa.dragonsbane_helmet":                             "Dragonsbane Helmet",
+  "item.mcsa.dragonsbane_chestplate":                         "Dragonsbane Chestplate",
+  "item.mcsa.dragonsbane_leggings":                           "Dragonsbane Leggings",
+  "item.mcsa.dragonsbane_boots":                              "Dragonsbane Boots",
+
+  "item.mcsa.ellegaard_helmet":                               "Ellegaard's Helmet",
+  "item.mcsa.ellegaard_chestplate":                           "Ellegaard's Chestplate",
+  "item.mcsa.ellegaard_leggings":                             "Ellegaard's Leggings",
+  "item.mcsa.ellegaard_boots":                                "Ellegaard's Boots",
+
+  "item.mcsa.ender_defender_helmet":                          "Ender Defender Helmet",
+  "item.mcsa.ender_defender_chestplate":                      "Ender Defender Chestplate",
+  "item.mcsa.ender_defender_leggings":                        "Ender Defender Leggings",
+  "item.mcsa.ender_defender_boots":                           "Ender Defender Boots",
+
+  "item.mcsa.enderman_helmet":                                "Enderman Mask",
+  "item.mcsa.enderman_chestplate":                            "Enderman Shirt",
+  "item.mcsa.enderman_leggings":                              "Enderman Pants",
+  "item.mcsa.enderman_boots":                                 "Enderman Shoes",
+
+  "item.mcsa.feelin_cute_helmet":                             "Feelin' Cute Helmet",
+  "item.mcsa.feelin_cute_chestplate":                         "Feelin' Cute Shoulder Pads",
+  "item.mcsa.feelin_cute_leggings":                           "Feelin' Cute Knee Pad",
+  "item.mcsa.feelin_cute_boots":                              "Feelin' Cute Boots",
+
+  "item.mcsa.fireworks_union_helmet":                         "Fireworks Union Hat",
+  "item.mcsa.fireworks_union_chestplate":                     "Fireworks Union Overalls",
+  "item.mcsa.fireworks_union_leggings":                       "Fireworks Union Pants",
+  "item.mcsa.fireworks_union_boots":                          "Fireworks Union Boots",
+
+  "item.mcsa.founder_helmet":                                 "Founder's Circlet",
+  "item.mcsa.founder_chestplate":                             "Founder's Shirt",
+  "item.mcsa.founder_leggings":                               "Founder's Skirt",
+  "item.mcsa.founder_boots":                                  "Founder's Shoes",
+
+  "item.mcsa.gabriel_helmet":                                 "Gabriel's Helmet",
+  "item.mcsa.gabriel_chestplate":                             "Gabriel's Chestplate",
+  "item.mcsa.gabriel_leggings":                               "Gabriel's Leggings",
+  "item.mcsa.gabriel_boots":                                  "Gabriel's Boots",
+
+  "item.mcsa.gill_helmet":                                    "Gill's Hat",
+  "item.mcsa.gill_chestplate":                                "Gill's Jacket",
+  "item.mcsa.gill_leggings":                                  "Gill's Pants",
+  "item.mcsa.gill_boots":                                     "Gill's Boots",
+
+  "item.mcsa.gladiator_capital_t_helmet":                     "Capital T's Gladiator Helmet",
+  "item.mcsa.gladiator_capital_t_chestplate":                 "Capital T's Gladiator Chestplate",
+  "item.mcsa.gladiator_capital_t_leggings":                   "Capital T's Gladiator Leggings",
+  "item.mcsa.gladiator_capital_t_boots":                      "Capital T's Gladiator Boots",
+
+  "item.mcsa.gladiator_clutch_helmet":                        "Clutch's Gladiator Helmet",
+  "item.mcsa.gladiator_clutch_chestplate":                    "Clutch's Gladiator Chestplate",
+  "item.mcsa.gladiator_clutch_leggings":                      "Clutch's Gladiator Leggings",
+  "item.mcsa.gladiator_clutch_boots":                         "Clutch's Gladiator Boots",
+
+  "item.mcsa.gladiator_facemeat_helmet":                      "Facemeat's Gladiator Helmet",
+  "item.mcsa.gladiator_facemeat_chestplate":                  "Facemeat's Gladiator Chestplate",
+  "item.mcsa.gladiator_facemeat_leggings":                    "Facemeat's Gladiator Leggings",
+  "item.mcsa.gladiator_facemeat_boots":                       "Facemeat's Gladiator Boots",
+
+  "item.mcsa.gladiator_headpunch_helmet":                     "Headpunch's Gladiator Helmet",
+  "item.mcsa.gladiator_headpunch_chestplate":                 "Headpunch's Gladiator Chestplate",
+  "item.mcsa.gladiator_headpunch_leggings":                   "Headpunch's Gladiator Leggings",
+  "item.mcsa.gladiator_headpunch_boots":                      "Headpunch's Gladiator Boots",
+
+  "item.mcsa.gladiator_meatface_helmet":                      "Meatface's Gladiator Helmet",
+  "item.mcsa.gladiator_meatface_chestplate":                  "Meatface's Gladiator Chestplate",
+  "item.mcsa.gladiator_meatface_leggings":                    "Meatface's Gladiator Leggings",
+  "item.mcsa.gladiator_meatface_boots":                       "Meatface's Gladiator Boots",
+
+  "item.mcsa.gladiator_shinstomper_helmet":                   "Shinstomper's Gladiator Helmet",
+  "item.mcsa.gladiator_shinstomper_chestplate":               "Shinstomper's Gladiator Chestplate",
+  "item.mcsa.gladiator_shinstomper_leggings":                 "Shinstomper's Gladiator Leggings",
+  "item.mcsa.gladiator_shinstomper_boots":                    "Shinstomper's Gladiator Boots",
+
+  "item.mcsa.gladiator_slab_helmet":                          "Slab's Gladiator Helmet",
+  "item.mcsa.gladiator_slab_chestplate":                      "Slab's Gladiator Chestplate",
+  "item.mcsa.gladiator_slab_leggings":                        "Slab's Gladiator Leggings",
+  "item.mcsa.gladiator_slab_boots":                           "Slab's Gladiator Boots",
+
+  "item.mcsa.golden_apple_helmet":                            "Golden Apple Helmet",
+  "item.mcsa.golden_apple_chestplate":                        "Golden Apple Chestplate",
+  "item.mcsa.golden_apple_leggings":                          "Golden Apple Leggings",
+  "item.mcsa.golden_apple_boots":                             "Golden Apple Boots",
+
+  "item.mcsa.golden_goliath_helmet":                          "Golden Goliath Helmet",
+  "item.mcsa.golden_goliath_chestplate":                      "Golden Goliath Chestplate",
+  "item.mcsa.golden_goliath_leggings":                        "Golden Goliath Leggings",
+  "item.mcsa.golden_goliath_boots":                           "Golden Goliath Boots",
+
+  "item.mcsa.golden_goliath_circuitry_helmet":                "Golden Goliath Circuitry Helmet",
+  "item.mcsa.golden_goliath_circuitry_chestplate":            "Golden Goliath Circuitry Chestplate",
+  "item.mcsa.golden_goliath_circuitry_leggings":              "Golden Goliath Circuitry Leggings",
+  "item.mcsa.golden_goliath_circuitry_boots":                 "Golden Goliath Circuitry Boots",
+
+  "item.mcsa.goofball_glory_helmet":                          "Goofball Glory Helmet",
+  "item.mcsa.goofball_glory_chestplate":                      "Goofball Glory Chest Strap",
+  "item.mcsa.goofball_glory_leggings":                        "Goofball Glory Knee Pad",
+  "item.mcsa.goofball_glory_boots":                           "Goofball Glory Boots",
+
+  "item.mcsa.harper_helmet":                                  "Harper's Hood",
+  "item.mcsa.harper_chestplate":                              "Harper's Suit Top",
+  "item.mcsa.harper_leggings":                                "Harper's Suit Bottom",
+  "item.mcsa.harper_boots":                                   "Harper's Boots",
+
+  "item.mcsa.institute_associate_helmet":                     "Sunshine Institute Associate's Headband",
+  "item.mcsa.institute_associate_chestplate":                 "Sunshine Institute Associate's Shirt",
+  "item.mcsa.institute_associate_leggings":                   "Sunshine Institute Associate's Pants",
+  "item.mcsa.institute_associate_boots":                      "Sunshine Institute Associate's Shoes",
+
+  "item.mcsa.institute_guard_helmet":                         "Sunshine Institute Guard's Hat",
+  "item.mcsa.institute_guard_chestplate":                     "Sunshine Institute Guard's Jacket",
+  "item.mcsa.institute_guard_leggings":                       "Sunshine Institute Guard's Pants",
+  "item.mcsa.institute_guard_boots":                          "Sunshine Institute Guard's Shoes",
+
+  "item.mcsa.institute_prisoner_helmet":                      "Sunshine Institute Prisoner Bandana",
+  "item.mcsa.institute_prisoner_chestplate":                  "Sunshine Institute Prisoner Shirt",
+  "item.mcsa.institute_prisoner_leggings":                    "Sunshine Institute Prisoner Pants",
+  "item.mcsa.institute_prisoner_boots":                       "Sunshine Institute Prisoner Shoes",
+
+  "item.mcsa.institute_warden_helmet":                        "Sunshine Institute Warden's Monocle",
+  "item.mcsa.institute_warden_chestplate":                    "Sunshine Institute Warden's Shirt",
+  "item.mcsa.institute_warden_leggings":                      "Sunshine Institute Warden's Pants",
+  "item.mcsa.institute_warden_boots":                         "Sunshine Institute Warden's Boots",
+
+  "item.mcsa.ivor_helmet":                                    "Ivor's Helmet",
+  "item.mcsa.ivor_chestplate":                                "Ivor's Chestplate",
+  "item.mcsa.ivor_leggings":                                  "Ivor's Leggings",
+  "item.mcsa.ivor_boots":                                     "Ivor's Boots",
+
+  "item.mcsa.jack_helmet":                                    "Jack's Hood",
+  "item.mcsa.jack_chestplate":                                "Jack's Vest",
+  "item.mcsa.jack_leggings":                                  "Jack's Pants",
+  "item.mcsa.jack_boots":                                     "Jack's Boots",
+
+  "item.mcsa.llama_brownish_helmet":                          "Llama Brown-ish Helmet",
+  "item.mcsa.llama_brownish_chestplate":                      "Llama Brown-ish Strap Plate",
+  "item.mcsa.llama_brownish_leggings":                        "Llama Brown-ish Knee Pads",
+  "item.mcsa.llama_brownish_boots":                           "Llama Brown-ish Boots",
+
+  "item.mcsa.lukas_helmet":                                   "Lukas' Goggles",
+  "item.mcsa.lukas_chestplate":                               "Lukas' Chestplate",
+  "item.mcsa.lukas_leggings":                                 "Lukas' Leggings",
+  "item.mcsa.lukas_boots":                                    "Lukas' Boots",
+
+  "item.mcsa.magnus_helmet":                                  "Magnus' Glass Helmet",
+  "item.mcsa.magnus_chestplate":                              "Magnus' Jumpsuit Top",
+  "item.mcsa.magnus_leggings":                                "Magnus' Jumpsuit Bottom",
+  "item.mcsa.magnus_boots":                                   "Magnus' Boots",
+
+  "item.mcsa.maya_helmet":                                    "Maya's Hat",
+  "item.mcsa.maya_chestplate":                                "Maya's Jacket",
+  "item.mcsa.maya_leggings":                                  "Maya's Pants",
+  "item.mcsa.maya_boots":                                     "Maya's Boots",
+
+  "item.mcsa.ninja_helmet":                                   "Ninja Mask",
+  "item.mcsa.ninja_chestplate":                               "Ninja Chestplate",
+  "item.mcsa.ninja_leggings":                                 "Ninja Leggings",
+  "item.mcsa.ninja_boots":                                    "Ninja Boots",
+
+  "item.mcsa.nurm_helmet":                                    "Nurm's Hat",
+  "item.mcsa.nurm_chestplate":                                "Nurm's Shirt",
+  "item.mcsa.nurm_leggings":                                  "Nurm's Pants",
+  "item.mcsa.nurm_boots":                                     "Nurm's Shoes",
+
+  "item.mcsa.olivia_helmet":                                  "Olivia's Helmet",
+  "item.mcsa.olivia_chestplate":                              "Olivia's Chestplate",
+  "item.mcsa.olivia_leggings":                                "Olivia's Leggings",
+  "item.mcsa.olivia_boots":                                   "Olivia's Boots",
+
+  "item.mcsa.petra_helmet":                                   "Petra's Helmet",
+  "item.mcsa.petra_chestplate":                               "Petra's Chestplate",
+  "item.mcsa.petra_leggings":                                 "Petra's Leggings",
+  "item.mcsa.petra_boots":                                    "Petra's Boots",
+
+  "item.mcsa.please_dont_hit_me_helmet":                      "Please Don't Hit Me Helmet",
+  "item.mcsa.please_dont_hit_me_chestplate":                  "Please Don't Hit Me Shoulder Pad",
+  "item.mcsa.please_dont_hit_me_leggings":                    "Please Don't Hit Me Knee Pad",
+  "item.mcsa.please_dont_hit_me_boots":                       "Please Don't Hit Me Boots",
+
+  "item.mcsa.prismarine_soldier_helmet":                      "Prismarine Soldier Helmet",
+  "item.mcsa.prismarine_soldier_chestplate":                  "Prismarine Soldier Chestplate",
+  "item.mcsa.prismarine_soldier_leggings":                    "Prismarine Soldier Leggings",
+  "item.mcsa.prismarine_soldier_boots":                       "Prismarine Soldier Boots",
+
+  "item.mcsa.redstone_riot_helmet":                           "Redstone Riot Helmet",
+  "item.mcsa.redstone_riot_chestplate":                       "Redstone Riot Chestplate",
+  "item.mcsa.redstone_riot_leggings":                         "Redstone Riot Leggings",
+  "item.mcsa.redstone_riot_boots":                            "Redstone Riot Boots",
+
+  "item.mcsa.reginald_helmet":                                "Reginald's Hat",
+  "item.mcsa.reginald_chestplate":                            "Reginald's Jacket",
+  "item.mcsa.reginald_leggings":                              "Reginald's Pants",
+  "item.mcsa.reginald_boots":                                 "Reginald's Boots",
+
+  "item.mcsa.shield_of_infinity_helmet":                      "Shield of Infinity Helmet",
+  "item.mcsa.shield_of_infinity_chestplate":                  "Shield of Infinity Chestplate",
+  "item.mcsa.shield_of_infinity_leggings":                    "Shield of Infinity Leggings",
+  "item.mcsa.shield_of_infinity_boots":                       "Shield of Infinity Boots",
+
+  "item.mcsa.sky_city_guard_helmet":                          "Sky City Guard Helmet",
+  "item.mcsa.sky_city_guard_chestplate":                      "Sky City Guard Jacket",
+  "item.mcsa.sky_city_guard_leggings":                        "Sky City Guard Pants",
+  "item.mcsa.sky_city_guard_boots":                           "Sky City Guard Boots",
+
+  "item.mcsa.soren_helmet":                                   "Soren's Helmet",
+  "item.mcsa.soren_chestplate":                               "Soren's Chestplate",
+  "item.mcsa.soren_leggings":                                 "Soren's Leggings",
+  "item.mcsa.soren_boots":                                    "Soren's Boots",
+
+  "item.mcsa.star_shield_helmet":                             "Star Shield Helmet",
+  "item.mcsa.star_shield_chestplate":                         "Star Shield Chestplate",
+  "item.mcsa.star_shield_leggings":                           "Star Shield Leggings",
+  "item.mcsa.star_shield_boots":                              "Star Shield Boots",
+
+  "item.mcsa.straps_n_straps_helmet":                         "Straps 'n Straps Helmet",
+  "item.mcsa.straps_n_straps_chestplate":                     "Straps 'n Straps Strap Plate",
+  "item.mcsa.straps_n_straps_leggings":                       "Straps 'n Straps Knee Pads",
+  "item.mcsa.straps_n_straps_boots":                          "Straps 'n Straps Boots",
+
+  "item.mcsa.swordbreaker_helmet":                            "Swordbreaker Helmet",
+  "item.mcsa.swordbreaker_chestplate":                        "Swordbreaker Chestplate",
+  "item.mcsa.swordbreaker_leggings":                          "Swordbreaker Leggings",
+  "item.mcsa.swordbreaker_boots":                             "Swordbreaker Boots",
+
+  "item.mcsa.tim_helmet":                                     "Tim's Helmet",
+  "item.mcsa.tim_chestplate":                                 "Tim's Chestplate",
+  "item.mcsa.tim_leggings":                                   "Tim's Leggings",
+  "item.mcsa.tim_boots":                                      "Tim's Boots",
+
+  "item.mcsa.tooth_chipper_helmet":                           "Tooth Chipper Helmet",
+  "item.mcsa.tooth_chipper_chestplate":                       "Tooth Chipper Chest Strap",
+  "item.mcsa.tooth_chipper_leggings":                         "Tooth Chipper Knee Pads",
+  "item.mcsa.tooth_chipper_boots":                            "Tooth Chipper Boots",
+
+  "item.mcsa.vos_helmet":                                     "Vos' Hood",
+  "item.mcsa.vos_chestplate":                                 "Vos' Shirt",
+  "item.mcsa.vos_leggings":                                   "Vos' Pants",
+  "item.mcsa.vos_boots":                                      "Vos' Boots",
+
+  "item.mcsa.white_pumpkin_helmet":                           "White Pumpkin",
+  "item.mcsa.white_pumpkin_chestplate":                       "White Pumpkin Shirt",
+  "item.mcsa.white_pumpkin_leggings":                         "White Pumpkin Pants",
+  "item.mcsa.white_pumpkin_boots":                            "White Pumpkin Shoes"
 }
