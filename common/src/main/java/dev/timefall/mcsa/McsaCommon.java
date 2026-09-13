@@ -1,6 +1,6 @@
 package dev.timefall.mcsa;
 
-import dev.timefall.mcsa.registry.ArmorMaterialsRegistry;
+import dev.timefall.mcsa.registry.ArmorMaterialRegistry;
 import dev.timefall.mcsa.registry.ItemGroupRegistry;
 import dev.timefall.mcsa.registry.ItemRegistry;
 import me.fzzyhmstrs.fzzy_config.api.ConfigApiJava;
@@ -8,7 +8,7 @@ import me.fzzyhmstrs.fzzy_config.api.ConfigApiJava;
 public class McsaCommon {
 
     public static void initialize() {
-        ArmorMaterialsRegistry.register();
+        ArmorMaterialRegistry.register();
         if (ConfigApiJava.platform().isDev())
             ModConstants.LOGGER.info(ModConstants.MOD_NAME + " (MCSA) Armor Materials initialized");
 

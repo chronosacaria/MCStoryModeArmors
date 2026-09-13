@@ -1,5 +1,8 @@
 package dev.timefall.mcsa.effect;
 
+import dev.timefall.mcsa.registry.tag.McsaDamageTypeTags;
+import net.minecraft.entity.damage.DamageSource;
+
 public class ArmorEffects {
 
     /// BIG CAVEAT TO ALL NOTES IN THIS FILE:
@@ -8,40 +11,48 @@ public class ArmorEffects {
 
     /// Ivor's Lab Armors
 
-    ///  |-------------------------------------------------------|
-    ///  |             Ability Name: Adamantine Guard            |
-    ///  |            Armor Set: Adamantium Impervium            |
-    ///  |-------------------------------------------------------|
-    ///  | Aspect   | Description                                |
-    ///  |----------|--------------------------------------------|
-    ///  | Function | Reduce incoming mêlée and projectile       |
-    ///  |          | damage by 75% and resist knockback.        |
-    ///  |          | During the duration, the wearer is         |
-    ///  |          | slowed, only able to move at 25% speed.    |
-    ///  |          | During the duration, the armor does not    |
-    ///  |          | take durability damage.                    |
-    ///  |----------|--------------------------------------------|
-    ///  | Duration | TBD                                        |
-    ///  |----------|--------------------------------------------|
-    ///  | Trigger  | Full set of armor and key press            |
-    ///  |----------|--------------------------------------------|
-    ///  | Type     | Active                                     |
-    ///  |----------|--------------------------------------------|
-    ///  | Notes    | Protection can be handled by referencing   |
-    ///  |          | vanilla Enchantment Effects:               |
-    ///  |          |    - Blast Protection                      |
-    ///  |          |    - Fire Protection                       |
-    ///  |          |    - Projectile Protection                 |
-    ///  |          |    - Protection                            |
-    ///  |          |                                            |
-    ///  |          | Slowness can probably be handled by        |
-    ///  |          | vanilla Slowness V Status Effect. This     |
-    ///  |          | should provide the 75% speed reduction.    |
-    ///  |          |                                            |
-    ///  |          | Questions:                                 |
-    ///  |          |    Should the particles from the Slowness  |
-    ///  |          |    Status Effect be hidden?                |
-    ///  |----------|--------------------------------------------|
+    ///  |-----------------------------------------------------------------------------------------------|
+    ///  |                                 Ability Name: Adamantine Guard                                |
+    ///  |                                 Armor Set: Adamantium Impervium                               |
+    ///  |-----------------------------------------------------------------------------------------------|
+    ///  | Aspect   | Description                                                                        |
+    ///  |----------|------------------------------------------------------------------------------------|
+    ///  | Function | Reduce incoming mêlée and projectile damage by 75% and resist knockback. During    |
+    ///  |          | During the duration:                                                               |
+    ///  |          |   - the wearer is slowed, only able to move at 25% speed                           |
+    ///  |          |   - the armor does not take durability damage                                      |
+    ///  |----------|------------------------------------------------------------------------------------|
+    ///  | Duration | TBD                                                                                |
+    ///  |----------|------------------------------------------------------------------------------------|
+    ///  | Trigger  | Full set of armor and key press                                                    |
+    ///  |----------|------------------------------------------------------------------------------------|
+    ///  | Type     | Active                                                                             |
+    ///  |----------|------------------------------------------------------------------------------------|
+    ///  | Checks   | ○ Damage Reduction - LivingEntityMixin#mcsa$cancelArmorDurabilityDamage            |
+    ///  |          | X Speed Reduction                                                                  |
+    ///  |          | ○ Durability Damage Cancellation - ItemStackMixin#mcsa$cancelArmorDurabilityDamage |
+    ///  |----------|------------------------------------------------------------------------------------|
+    ///  | Notes    | Protection can be handled by referencing                                           |
+    ///  |          | vanilla Enchantment Effects:                                                       |
+    ///  |          |    - Blast Protection                                                              |
+    ///  |          |    - Fire Protection                                                               |
+    ///  |          |    - Projectile Protection                                                         |
+    ///  |          |    - Protection                                                                    |
+    ///  |          |                                                                                    |
+    ///  |          | Slowness can probably be handled by vanilla Slowness V Status Effect. This should  |
+    ///  |          |   provide the 75% speed reduction.                                                 |
+    ///  |          |                                                                                    |
+    ///  |          | Questions:                                                                         |
+    ///  |          |    Should the particles from the Slowness Status Effect be hidden?                 |
+    ///  |----------|------------------------------------------------------------------------------------|
+
+    public static float getReducedDamage(DamageSource damageSource, float damageAmount) {
+        if (damageSource.isIn(McsaDamageTypeTags.ADAMANTINE_GUARD_RESISTANT_TO)) {
+            damageAmount *= 0.25f;
+        }
+
+        return damageAmount;
+    }
 
     ///  |-------------------------------------------------------|
     ///  |              Ability Name: Dragon's Dread             |

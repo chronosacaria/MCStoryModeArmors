@@ -4,7 +4,10 @@
   "package": "dev.timefall.mcsa.mixin",
   "refmap": "mcsa.refmap.json",
   "compatibilityLevel": "JAVA_21",
-  "mixins": [],
+  "mixins": [
+    "ItemStackMixin",
+    "LivingEntityMixin"
+  ],
   "client": [
     "MixinTitleScreen"
   ],

@@ -18,7 +18,7 @@ import net.minecraft.util.Util;
 import java.util.EnumMap;
 import java.util.List;
 
-public class ArmorMaterialsRegistry {
+public class ArmorMaterialRegistry {
     private static final Registrar<ArmorMaterial> ARMOR_MATERIAL = ConfigApiJava.platform().createRegistrar(ModConstants.MOD_ID, Registries.ARMOR_MATERIAL);
 
 
